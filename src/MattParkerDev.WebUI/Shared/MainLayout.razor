@@ -1,10 +1,12 @@
 ﻿@using MattParkerDev.WebUI.Models
+@using MudBlazor.Utilities
 @inherits LayoutComponentBase
 @inject NavigationManager NavigationManager
+@inject ISnackbar Snackbar
 
-<MudThemeProvider IsDarkMode="@_isDarkMode" Theme="@_theme"/>
+<MudThemeProvider IsDarkMode="@_isDarkMode" Theme="@_themeManager.Theme"/>
 <MudDialogProvider/>
-<MudSnackbarProvider/>
+<MudSnackbarProvider />
 
 <MudLayout>
     <MudAppBar Elevation="0" Dense="true">
@@ -12,6 +14,11 @@
             <MudIcon Class="mr-1" Icon="@Icons.Material.Filled.Home"></MudIcon>
             <MudText Typo="Typo.h6">MattParkerDev</MudText>
         </MudButton>
+        @if (_showThemeManagerButton)
+        {
+            <MudThemeManagerButton OnClick="@((e) => OpenThemeManager(true))" />
+        }
+        <MudThemeManager Open="_themeManagerOpen" OpenChanged="OpenThemeManager" Theme="_themeManager" ThemeChanged="UpdateTheme" />
         
         <MudSpacer/>
         <MudButton Variant="@GetNavButtonVariant(AppPage.Home)"         Class="@GetNavButtonClass(AppPage.Home)"        Color="@GetNavButtonColour(AppPage.Home)"        IconColor="Color.Inherit" StartIcon="@Icons.Material.Filled.Home"      Href="/" >Home</MudButton>
@@ -33,11 +40,48 @@
 </MudLayout>
 
 @code {
-    bool _isDarkMode = false;
+    bool _isDarkMode = true;
+    int _clickCounter = 0;
+    System.Timers.Timer _timer = new System.Timers.Timer(3000);
+    
+    protected override void OnInitialized()
+    {
+        StateHasChanged();
+
+        _themeManager.Theme = _theme;
+        // Required for MudBlazor Theme Manager
+        StateHasChanged();
+        
+        _timer.Elapsed += (sender, args) =>
+        {
+            ResetCounter();
+        };
+    }
 
     private void ToggleDarkMode()
     {
         _isDarkMode = !_isDarkMode;
+        if (_clickCounter == 0)
+        {
+            _timer.Enabled = true;
+        }
+        else if (_clickCounter == 5)
+        {
+            _timer.Enabled = false;
+            _showThemeManagerButton = true;
+            Snackbar.Add("Theme Manager Unlocked", Severity.Success, config =>
+            {
+                config.VisibleStateDuration = 2000;
+                config.HideTransitionDuration = 500;
+                config.ShowTransitionDuration = 500;
+            });
+        }
+        _clickCounter++;
+    }
+    
+    private void ResetCounter()
+    {
+        _clickCounter = 0;
     }
     
     private string GetNavButtonClass(AppPage page)
@@ -54,7 +98,7 @@
     
     private Color GetNavButtonColour(AppPage page)
     {
-        return page == GetCurrentPageAsEnum() ? Color.Warning : Color.Inherit;
+        return page == GetCurrentPageAsEnum() ? Color.Secondary : Color.Inherit;
     }
     
     private AppPage GetCurrentPageAsEnum()
@@ -69,11 +113,12 @@
     {
         Palette = new PaletteLight()
         {
-            
+            AppbarBackground = new MudColor("#3b3947ff"),
+            Secondary =  new MudColor("#5759d5ff")
         },
-        PaletteDark = new PaletteLight()
+        PaletteDark = new PaletteDark()
         {
-            
+            Secondary = new MudColor("#5759d5ff")
         },
         LayoutProperties = new LayoutProperties()
         {
@@ -83,4 +128,20 @@
         {
         },
     };
+    
+
+    private ThemeManagerTheme _themeManager = new ThemeManagerTheme();
+    private bool _showThemeManagerButton = false;
+    private bool _themeManagerOpen = false;
+
+    void OpenThemeManager(bool value)
+    {
+        _themeManagerOpen = value;
+    }
+
+    void UpdateTheme(ThemeManagerTheme value)
+    {
+        _themeManager = value;
+        StateHasChanged();
+    }
 }
