@@ -1,22 +1,22 @@
 ﻿@inherits LayoutComponentBase
 
-<MudThemeProvider/>
+<MudThemeProvider IsDarkMode="_isDarkMode"/>
 <MudDialogProvider/>
 <MudSnackbarProvider/>
 
 <MudLayout>
     <MudAppBar Elevation="0">
-        <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@((e) => DrawerToggle())"/>
+        <MudText Typo="Typo.h6">MattParkerDev</MudText>
+        <MudNavLink Href="" Match="NavLinkMatch.All" Color="Color.Inherit" IconColor="Color.Inherit" Icon="@Icons.Material.Filled.Home">Home</MudNavLink>
+        <MudNavLink Href="about" Match="NavLinkMatch.Prefix" IconColor="Color.Inherit" Icon="@Icons.Material.Filled.Add">About</MudNavLink>
+        <MudNavLink Href="portfolio" Match="NavLinkMatch.Prefix" IconColor="Color.Inherit" Icon="@Icons.Material.Filled.List">Portfolio</MudNavLink>
+        <MudNavLink Href="blog" Match="NavLinkMatch.Prefix" IconColor="Color.Inherit" Icon="@Icons.Material.Filled.List">Blog</MudNavLink>
         <MudSpacer/>
-        <MudIconButton Icon="@Icons.Custom.Brands.MudBlazor" Color="Color.Inherit" Link="https://mudblazor.com/" Target="_blank"/>
-        <MudIconButton Icon="@Icons.Custom.Brands.GitHub" Color="Color.Inherit" Link="https://github.com/MudBlazor/MudBlazor/" Target="_blank"/>
+        <MudTooltip Duration="1000" Text="@( _isDarkMode ? "Switch to Light Theme" : "Switch to Dark Theme")">
+            <MudIconButton Icon="@( _isDarkMode ? @Icons.Material.Rounded.LightMode : @Icons.Material.Outlined.DarkMode)" Color="Color.Inherit" OnClick="@ToggleDarkMode"/>
+        </MudTooltip>
+        <MudIconButton Icon="@Icons.Custom.Brands.GitHub" Color="Color.Inherit" Link="https://github.com/MattParkerDev" Target="_blank"/>
     </MudAppBar>
-    <MudDrawer @bind-Open="_drawerOpen" Elevation="1">
-        <MudDrawerHeader>
-            <MudText Typo="Typo.h6">MattParkerDev</MudText>
-        </MudDrawerHeader>
-        <NavMenu/>
-    </MudDrawer>
     <MudMainContent>
         <MudContainer MaxWidth="MaxWidth.Large" Class="my-16 pt-16">
             @Body
@@ -25,11 +25,10 @@
 </MudLayout>
 
 @code {
-    bool _drawerOpen = true;
+    bool _isDarkMode = false;
 
-    void DrawerToggle()
+    private void ToggleDarkMode()
     {
-        _drawerOpen = !_drawerOpen;
+        _isDarkMode = !_isDarkMode;
     }
-
 }

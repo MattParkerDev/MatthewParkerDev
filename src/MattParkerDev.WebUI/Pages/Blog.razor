@@ -1,0 +1,20 @@
+﻿@page "/blog"
+
+<PageTitle>Blog</PageTitle>
+
+<MudText Typo="Typo.h3" GutterBottom="true">Blog</MudText>
+
+
+<MudGrid>
+    @for (var i = 0; i < 8; i++)
+    {
+        <MudItem xs="12" sm="6" md="4" lg="3" xl="3">
+            <GenericSkeletonPost />
+        </MudItem>
+    }
+</MudGrid>
+
+
+@code {
+    
+}

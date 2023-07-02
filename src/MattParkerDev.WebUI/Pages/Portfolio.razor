@@ -1,0 +1,20 @@
+﻿@page "/portfolio"
+
+<PageTitle>Portfolio</PageTitle>
+
+<MudText Typo="Typo.h3" GutterBottom="true">Portfolio</MudText>
+
+<MudGrid>
+    @for (var i = 0; i < 4; i++)
+    {
+        var swap = i % 2 == 0;
+        <MudItem xs="12">
+            <GenericSkeletonPortfolioEntry SwapTextAndMedia="swap" />
+        </MudItem>
+    }
+</MudGrid>
+
+
+@code {
+
+}
