@@ -1,4 +1,5 @@
 ﻿@using MattParkerDev.WebUI.Services
+@using System.Net
 
 @inject HttpClient Http
 
@@ -23,9 +24,16 @@
             MarkdownContent = "Head back to [blogs!](/blog)";
             return;
         }
-        var blogContent = await Http.GetStringAsync($"_blogs/{blog.Slug}/{blog.Slug}.md");
-        BlogTitle = blog.Title;
-        MarkdownContent = blogContent;
-       
+        try
+        {
+            var blogContent = await Http.GetStringAsync($"_blogs/{blog.Slug}/{blog.Slug}.md");
+            BlogTitle = blog.Title;
+            MarkdownContent = blogContent;
+        }
+        catch (HttpRequestException e) when (e.StatusCode == HttpStatusCode.NotFound)
+        {
+            BlogTitle = "404 Not Found 😢";
+            MarkdownContent = "Head back to [blogs!](/blog)";
+        }
     }
 }

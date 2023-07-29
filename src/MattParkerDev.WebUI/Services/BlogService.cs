@@ -6,7 +6,7 @@ public sealed class BlogService
 {
     public static readonly List<Blog> Blogs = new List<Blog>
     {
-        new() 
+        new()
         {
             Sequence = 0,
             Slug = "my-first-blog",
@@ -19,6 +19,11 @@ public sealed class BlogService
     public static Blog? GetBlogBySlug(string slug)
     {
         return Blogs.FirstOrDefault(b => b.Slug == slug);
+    }
+
+    public static string GetBlogTitleBySlug(string slug)
+    {
+        return Blogs.Where(b => b.Slug == slug).Select(s => s.Title).First();
     }
 
     public static List<string> SlugList => Blogs.Select(b => b.Slug).ToList();

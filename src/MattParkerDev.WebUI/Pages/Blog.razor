@@ -3,7 +3,7 @@
 
 @using MattParkerDev.WebUI.Services
 
-<PageTitle>Blog</PageTitle>
+<PageTitle>@_browserTabTitle</PageTitle>
 
 @if (BlogSlug is not null)
 {
@@ -32,6 +32,23 @@ else
 @code {
     [Parameter]
     public string? BlogSlug { get; set; }
-    
-    
+
+    private string _browserTabTitle = "Blog";
+
+    protected override void OnParametersSet()
+    {
+        if (BlogSlug is not null)
+        {
+            SetBrowserTabTitle(BlogService.GetBlogTitleBySlug(BlogSlug));
+        }
+        else
+        {
+            SetBrowserTabTitle("Blog");
+        }
+    }
+
+    private void SetBrowserTabTitle(string title)
+    {
+        _browserTabTitle = title;
+    }
 }
