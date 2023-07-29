@@ -15,9 +15,6 @@
     <MudCardContent>
         <MudText Typo="Typo.h5">@Title</MudText>
         <MudText>@Description</MudText>
-        <MudText>lorem ipsum</MudText>
-        <MudText>lorem ipsum</MudText>
-        <MudText>lorem ipsum</MudText>
     </MudCardContent>
     <MudCardActions>
     </MudCardActions>
@@ -25,15 +22,14 @@
 
 @code {
     [Parameter]
-    public string Title { get; set; } = default!;
+    public required string Title { get; set; }
     [Parameter]
-    public string Description { get; set; } = default!;
+    public required string Description { get; set; }
     [Parameter]
-    public string Slug { get; set; } = default!;
+    public required string Slug { get; set; }
     
-    private async Task OpenBlog()
+    private void OpenBlog()
     {
-        NavigationManager.NavigateTo("/blog/my-first-blog");
-        StateHasChanged();
+        NavigationManager.NavigateTo("/blog/" + Slug);
     }
 }

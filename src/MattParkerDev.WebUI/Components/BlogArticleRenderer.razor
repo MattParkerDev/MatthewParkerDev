@@ -1,4 +1,5 @@
-﻿
+﻿@using MattParkerDev.WebUI.Services
+
 <MudText Typo="Typo.h3" GutterBottom="true">@BlogTitle</MudText>
 
 <MudMarkdown Value="@MarkdownContent" />
@@ -7,6 +8,21 @@
 
     [Parameter]
     public string BlogSlug { get; set; } = default!;
-    private string BlogTitle { get; set; } = "My First Blog!";
-    private string MarkdownContent { get; set; } = "🚧";
+    
+    private string BlogTitle { get; set; } = string.Empty;
+    private string MarkdownContent { get; set; } = string.Empty;
+    
+    protected override void OnParametersSet()
+    {
+        var blog = BlogService.GetBlogBySlug(BlogSlug);
+        if (blog is null)
+        {
+            BlogTitle = "404 Not Found 😢";
+            MarkdownContent = "Head back to [blogs!](/blog)";
+            return;
+        }
+        BlogTitle = blog.Title;
+        MarkdownContent = blog.Content;
+       
+    }
 }

@@ -1,6 +1,8 @@
 ﻿@page "/blog"
 @page "/blog/{blogslug}"
 
+@using MattParkerDev.WebUI.Services
+
 <PageTitle>Blog</PageTitle>
 
 @if (BlogSlug is not null)
@@ -11,15 +13,18 @@ else
 {
     <MudText Typo="Typo.h3" GutterBottom="true">Blog</MudText>
     <MudGrid>
-    <MudItem xs="12" sm="6" md="4" lg="3" xl="3">
-        <BlogPreviewCard Title="My First Blog!" Description="Testing out a blog post." Slug="goat" />
-    </MudItem>
-    @for (var i = 0; i < 8; i++)
-    {
-        <MudItem xs="12" sm="6" md="4" lg="3" xl="3">
-            <GenericSkeletonPost/>
-        </MudItem>
-    }
+        @foreach(var blog in BlogService.Blogs.OrderBy(s => s.Sequence))
+        {
+            <MudItem xs="12" sm="6" md="4" lg="3" xl="3">
+                <BlogPreviewCard Title="@blog.Title" Description="@blog.Description" Slug="@blog.Slug" />
+            </MudItem>
+        }
+        @for (var i = 0; i < 7; i++)
+        {
+            <MudItem xs="12" sm="6" md="4" lg="3" xl="3">
+                <GenericSkeletonPost/>
+            </MudItem>
+        }
     </MudGrid>
 }
 
