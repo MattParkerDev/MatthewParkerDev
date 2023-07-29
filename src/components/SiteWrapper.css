@@ -1,0 +1,33 @@
+.siteWrapper {
+   
+    animation: float 0s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+.clouds {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/9/95/Cartoon_cloud.svg');
+    background-repeat: repeat;
+    animation: clouds-scroll 0s linear infinite;
+    animation-fill-mode: forwards;
+    background-color: lightblue; /* added line */
+}
+
+@keyframes clouds-scroll {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -1000px 0;
+    }
+}
