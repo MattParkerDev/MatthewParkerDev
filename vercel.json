@@ -1,3 +1,4 @@
 ﻿{
+  "$schema": "http://openapi.vercel.sh/vercel.json",
   "buildCommand": "chmod +x build-cloudflare.sh && ./build-cloudflare.sh"
 }
