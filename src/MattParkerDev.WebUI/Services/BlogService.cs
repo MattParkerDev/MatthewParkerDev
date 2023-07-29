@@ -6,7 +6,7 @@ public sealed class BlogService
 {
     public static readonly List<Blog> Blogs = new List<Blog>
     {
-        new()
+        new() 
         {
             Sequence = 0,
             Slug = "my-first-blog",
