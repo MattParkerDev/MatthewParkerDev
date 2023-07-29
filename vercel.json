@@ -1,5 +1,5 @@
 ﻿{
-  "buildCommand": "chmod +x build-cloudflare.sh && ./build-cloudflare.sh",
+  "buildCommand": "explode!",
   "outputDirectory": "output/wwwroot",
   "rewrites": [
     {
