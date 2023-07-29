@@ -1,5 +1,7 @@
 ﻿@using MattParkerDev.WebUI.Services
 
+@inject HttpClient Http
+
 <MudText Typo="Typo.h3" GutterBottom="true">@BlogTitle</MudText>
 
 <MudMarkdown Value="@MarkdownContent" />
@@ -12,7 +14,7 @@
     private string BlogTitle { get; set; } = string.Empty;
     private string MarkdownContent { get; set; } = string.Empty;
     
-    protected override void OnParametersSet()
+    protected override async Task OnParametersSetAsync()
     {
         var blog = BlogService.GetBlogBySlug(BlogSlug);
         if (blog is null)
@@ -21,8 +23,9 @@
             MarkdownContent = "Head back to [blogs!](/blog)";
             return;
         }
+        var blogContent = await Http.GetStringAsync($"_blogs/{blog.Slug}/{blog.Slug}.md");
         BlogTitle = blog.Title;
-        MarkdownContent = blog.Content;
+        MarkdownContent = blogContent;
        
     }
 }

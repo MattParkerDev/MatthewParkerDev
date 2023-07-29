@@ -15,5 +15,6 @@ builder.Services.AddMudServices(config =>
 {
     config.SnackbarConfiguration.PositionClass = Defaults.Classes.Position.BottomRight;
 });
+builder.Services.AddMudMarkdownServices();
 
 await builder.Build().RunAsync();

@@ -12,8 +12,7 @@ public sealed class BlogService
             Slug = "my-first-blog",
             Title = "My First Blog!",
             Description =
-                "This is my first blog. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.",
-            Content = "This is my first blog. It's not very good."
+                "This is my first blog. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut."
         }
     };
 
