@@ -1,3 +1,0 @@
-﻿{
-  "rewrites": [{ "source": "/about", "destination": "/about-our-company.html" }]
-}
