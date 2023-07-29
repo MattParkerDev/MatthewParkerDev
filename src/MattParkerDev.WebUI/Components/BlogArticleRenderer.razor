@@ -1,0 +1,12 @@
+﻿
+<MudText Typo="Typo.h3" GutterBottom="true">@BlogTitle</MudText>
+
+<MudMarkdown Value="@MarkdownContent" />
+
+@code {
+
+    [Parameter]
+    public string BlogSlug { get; set; } = default!;
+    private string BlogTitle { get; set; } = "My First Blog!";
+    private string MarkdownContent { get; set; } = "🚧";
+}

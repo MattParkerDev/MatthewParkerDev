@@ -104,6 +104,12 @@
     private AppPage GetCurrentPageAsEnum()
     {
         var currentPathString = NavigationManager.ToBaseRelativePath(NavigationManager.Uri);
+        // Quick and dirty
+        if (currentPathString.StartsWith("blog"))
+        {
+            currentPathString = "blog";
+        }
+        Console.WriteLine(currentPathString);
         Enum.TryParse(currentPathString, true, out AppPage currentPage);
 
         return currentPage;

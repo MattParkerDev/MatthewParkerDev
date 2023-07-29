@@ -1,0 +1,39 @@
+﻿
+@inject NavigationManager NavigationManager
+
+
+<MudCard style="cursor:pointer" @onclick="OpenBlog">
+    <MudStack Style="height: 200px">
+        <MudSpacer />
+        <MudStack>
+            <MudSpacer/>
+            <MudText Align="Align.Center" Typo="Typo.h2">🚧</MudText>
+            <MudSpacer/>
+        </MudStack>
+        <MudSpacer />
+    </MudStack>
+    <MudCardContent>
+        <MudText Typo="Typo.h5">@Title</MudText>
+        <MudText>@Description</MudText>
+        <MudText>lorem ipsum</MudText>
+        <MudText>lorem ipsum</MudText>
+        <MudText>lorem ipsum</MudText>
+    </MudCardContent>
+    <MudCardActions>
+    </MudCardActions>
+</MudCard>
+
+@code {
+    [Parameter]
+    public string Title { get; set; } = default!;
+    [Parameter]
+    public string Description { get; set; } = default!;
+    [Parameter]
+    public string Slug { get; set; } = default!;
+    
+    private async Task OpenBlog()
+    {
+        NavigationManager.NavigateTo("/blog/my-first-blog");
+        StateHasChanged();
+    }
+}
