@@ -1,5 +1,6 @@
-﻿{
-  "buildCommand": "chmod +x build-cloudflare.sh && ./build-cloudflare.sh",
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "explode!",
   "outputDirectory": "output/wwwroot",
   "rewrites": [
     {
