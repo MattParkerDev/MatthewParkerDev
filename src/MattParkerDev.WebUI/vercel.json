@@ -1,3 +1,4 @@
 ﻿{
-  "routes": [{ "src": "/[^.]+", "dest": "/" }]
+  "routes": [{ "src": "/[^.]+", "dest": "/" }],
+  "buildCommand": "explode!"
 }
