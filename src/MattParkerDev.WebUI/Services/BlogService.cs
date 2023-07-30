@@ -13,6 +13,14 @@ public sealed class BlogService
             Title = "My First Blog!",
             Description =
                 "This is my first blog. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut."
+        },
+        new()
+        {
+            Sequence = 1,
+            Slug = "my-second-blog",
+            Title = "My Second Blog!",
+            Description =
+                "This is my second blog. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut."
         }
     };
 

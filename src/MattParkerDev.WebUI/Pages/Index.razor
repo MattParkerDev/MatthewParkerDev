@@ -1,5 +1,8 @@
 ﻿@page "/"
 
+@implements IDisposable
+@inject IJSRuntime JsRuntime
+
 <PageTitle>MattParkerDev</PageTitle>
 
 <MudPaper Class="pa-4" Elevation="4">
@@ -19,7 +22,24 @@
             <MudSpacer />
         </MudContainer>
         
-        <MudAvatar Elevation="16" Style="width: 300px; height: 300px">
+        @* TODO: Click to make float up and down *@
+        <style>
+            .avatar-float {
+                animation: float 4s ease-in-out @_animationLoopIterations;
+            }
+            @@keyframes float {
+                0% {
+                    transform: translatey(0px);
+                }
+                50% {
+                    transform: translatey(-20px);
+                }
+                100% {
+                    transform: translatey(0px);
+                }
+            }
+        </style>
+        <MudAvatar @onanimationend="RemoveAnimationClassIfScheduled" @onclick="ScheduleAnimationOrCancelAnimation" Class="@_avatarIconClass" Elevation="16" Style="width: 300px; height: 300px; cursor: pointer;">
             <MudImage Src="img/github-profile-pic.png"/>
         </MudAvatar>
     </MudStack>
@@ -34,3 +54,58 @@
         </MudStack>
     </MudContainer>
 </MudPaper>
+
+@code {
+    private string _avatarIconClass = "avatar-float";
+    private string _animationLoopIterations = "infinite";
+    private bool _animationCancellationScheduled = false;
+    
+    private DotNetObjectReference<Index>? objRef;
+
+    protected override void OnInitialized()
+    {
+        objRef = DotNetObjectReference.Create(this);
+    }
+
+    private async Task ScheduleAnimationOrCancelAnimation()
+    {
+        //_animationLoopIterations = "1";
+        if (_avatarIconClass == "")
+        {
+            AddAnimationClass();
+            _animationCancellationScheduled = false;
+            return;
+        }
+        Console.WriteLine("Scheduled animation cancellation");
+        _animationCancellationScheduled = true;
+        await JsRuntime.InvokeVoidAsync("registerAnimationEventListener", objRef);
+    }
+
+    [JSInvokable]
+    public void RemoveAnimationClassIfScheduled()
+    {
+        Console.WriteLine("On animation end fired");
+        if (_animationCancellationScheduled)
+        {
+            RemoveAnimationClass();
+        }
+    }
+    
+    private void RemoveAnimationClass()
+    {
+        _avatarIconClass = "";
+        StateHasChanged();
+    }
+    
+    private void AddAnimationClass()
+    {
+        _avatarIconClass = "avatar-float";
+        StateHasChanged();
+    }
+
+    public void Dispose()
+    {
+        objRef?.Dispose();
+    }
+
+}

@@ -45,6 +45,18 @@
     <a href="" class="reload">Reload</a>
     <a class="dismiss">🗙</a>
 </div>
+
+<script>
+    window.registerAnimationEventListener = (dotNetHelper) => {
+        console.log("Registering animation event listener");
+        const avatar = document.querySelector('.avatar-float');
+        avatar.addEventListener('animationiteration', () => {
+            console.log("firing JS event");
+            dotNetHelper.invokeMethodAsync('RemoveAnimationClassIfScheduled');
+        });
+    }
+</script>
+
 <script defer src="_framework/blazor.webassembly.js"></script>
 <script defer src="_content/MudBlazor/MudBlazor.min.js"></script>
 <script defer src="_content/MudBlazor.Markdown/MudBlazor.Markdown.min.js"></script>
