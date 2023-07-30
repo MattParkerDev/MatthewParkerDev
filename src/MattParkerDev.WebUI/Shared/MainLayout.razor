@@ -20,10 +20,10 @@
         }
         <MudThemeManager Open="_themeManagerOpen" OpenChanged="OpenThemeManager" Theme="_themeManager" ThemeChanged="UpdateTheme" />
         
-        <MudSpacer/>
         <MudButton Variant="@GetNavButtonVariant(AppPage.Home)" Class="d-flex d-sm-none pa-1 ml-2" Style="min-width: 32px;" Color="@GetNavButtonColour(AppPage.Home)" Icon="@Icons.Material.Filled.Home" Href="/">
             <MudIcon Class="pa-0 ma-0" Icon="@Icons.Material.Filled.Home" />
         </MudButton>
+        <MudSpacer/>
         <MudButton Variant="@GetNavButtonVariant(AppPage.Home)"         Class="mx-1 px-3 d-none d-sm-flex"              Color="@GetNavButtonColour(AppPage.Home)"        IconColor="Color.Inherit" StartIcon="@Icons.Material.Filled.Home"      Href="/"            >Home</MudButton>
         <MudButton Variant="@GetNavButtonVariant(AppPage.About)"        Class="@GetNavButtonClass(AppPage.About)"       Color="@GetNavButtonColour(AppPage.About)"       IconColor="Color.Inherit" StartIcon="@Icons.Material.Filled.Info"      Href="about"        >About</MudButton>
         <MudButton Variant="@GetNavButtonVariant(AppPage.Portfolio)"    Class="@GetNavButtonClass(AppPage.Portfolio)"   Color="@GetNavButtonColour(AppPage.Portfolio)"   IconColor="Color.Inherit" StartIcon="@Icons.Material.Filled.Article"   Href="portfolio"    >Portfolio</MudButton>
@@ -31,7 +31,7 @@
         <MudSpacer/>   
         
         <MudTooltip Duration="1000" Text="@(_isDarkMode ? "Switch to Light Theme" : "Switch to Dark Theme")">
-            <MudIconButton Icon="@(_isDarkMode ? @Icons.Material.Rounded.LightMode : @Icons.Material.Outlined.DarkMode)" Color="Color.Inherit" OnClick="@ToggleDarkMode"/>
+            <MudIconButton Class="pl-1" Icon="@(_isDarkMode ? @Icons.Material.Rounded.LightMode : @Icons.Material.Outlined.DarkMode)" Color="Color.Inherit" OnClick="@ToggleDarkMode"/>
         </MudTooltip>
         <MudIconButton Class="d-none d-md-flex" Icon="@Icons.Custom.Brands.GitHub" Color="Color.Inherit" Link="https://github.com/MattParkerDev" Target="_blank"/>
     </MudAppBar>
