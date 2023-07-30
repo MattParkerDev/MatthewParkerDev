@@ -2,32 +2,35 @@
 
 <PageTitle>MattParkerDev</PageTitle>
 
-<MudPaper Class="pa-8" Elevation="4">
+<MudPaper Class="pa-4" Elevation="4">
+    <MudStack Justify="Justify.SpaceBetween" AlignItems="AlignItems.Center" Row="true">
+        <MudContainer Style="max-width: 50%" Class="mx-0">
+            <MudText Align="Align.Center" Typo="Typo.h3" GutterBottom="true">Hi, I'm Matt Parker! 👋</MudText>
+            <MudText Align="Align.Center" Class="d-none d-sm-block" Typo="Typo.body1" Style="font-weight: bold" >Software Engineer at SSW | C# | .NET | Blazor | TypeScript | React </MudText>
+            <MudContainer Class="d-none d-md-block mx-0 px-0 mt-3">
+                <MudStack Justify="Justify.SpaceEvenly" Row="true">
+                    <MudChip Href="https://ssw.com.au/people/matt-parker" Target="_blank" Icon="@Icons.Material.Filled.Person" Color="Color.Error">SSW.People</MudChip>
+                    <MudChip Href="https://www.linkedin.com/in/mattparkerdev" Target="_blank" Icon="@Icons.Custom.Brands.LinkedIn" Color="Color.Primary">LinkedIn</MudChip>
+                    <MudChip Href="https://github.com/MattParkerDev" Target="_blank" Icon="@Icons.Custom.Brands.GitHub" Color="Color.Dark">GitHub</MudChip>
+                    <MudChip Href="https://twitter.com/MattParkerDev" Target="_blank" Icon="@Icons.Custom.Brands.Twitter" Color="Color.Info">Twitter</MudChip>
+                </MudStack>
+            </MudContainer>
+
+            <MudSpacer />
+        </MudContainer>
+        
+        <MudAvatar Elevation="16" Style="width: 300px; height: 300px">
+            <MudImage Src="img/github-profile-pic.png"/>
+        </MudAvatar>
+    </MudStack>
     
-<MudStack Row="true">
-    <MudStack>
-        <MudText Typo="Typo.h3" GutterBottom="true">Hi, I'm Matt Parker! 👋</MudText>
-        <MudText Typo="Typo.body1" Style="font-weight: bold" >Software Engineer at SSW | C# | .NET | Blazor | TypeScript | React </MudText>
-        <MudStack Row="true">
+    <MudText Class="d-flex d-sm-none" Typo="Typo.body1" Style="font-weight: bold" >Software Engineer at SSW<br/> C# | .NET | Blazor | TypeScript | React </MudText>
+    <MudContainer Class="d-block d-md-none px-0 mt-2">
+        <MudStack Justify="Justify.SpaceEvenly" Spacing="0" Row="true">
             <MudChip Href="https://ssw.com.au/people/matt-parker" Target="_blank" Icon="@Icons.Material.Filled.Person" Color="Color.Error">SSW.People</MudChip>
             <MudChip Href="https://www.linkedin.com/in/mattparkerdev" Target="_blank" Icon="@Icons.Custom.Brands.LinkedIn" Color="Color.Primary">LinkedIn</MudChip>
             <MudChip Href="https://github.com/MattParkerDev" Target="_blank" Icon="@Icons.Custom.Brands.GitHub" Color="Color.Dark">GitHub</MudChip>
             <MudChip Href="https://twitter.com/MattParkerDev" Target="_blank" Icon="@Icons.Custom.Brands.Twitter" Color="Color.Info">Twitter</MudChip>
         </MudStack>
-        
-        <MudSpacer />
-        
-        <MudStack Row="true">
-            <MudSpacer />
-            <MudIcon Size="Size.Large" Icon="@Icons.Material.Filled.Construction"></MudIcon>
-            <MudSpacer />
-        </MudStack>
-        
-        <MudSpacer />
-    </MudStack>
-    <MudSpacer />
-    <MudAvatar Elevation="16" Style="width: 300px; height: 300px">
-        <MudImage Src="img/github-profile-pic.png"/>
-    </MudAvatar>
-</MudStack>
+    </MudContainer>
 </MudPaper>
