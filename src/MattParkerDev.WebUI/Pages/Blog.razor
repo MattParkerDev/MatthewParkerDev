@@ -37,18 +37,28 @@ else
 
     protected override void OnParametersSet()
     {
-        if (BlogSlug is not null)
+        if (BlogSlug is null)
+        {
+            SetBrowserTabTitle("Blog");
+            return;
+        }
+        if (BlogIsValid(BlogSlug))
         {
             SetBrowserTabTitle(BlogService.GetBlogTitleBySlug(BlogSlug));
         }
         else
         {
-            SetBrowserTabTitle("Blog");
+            SetBrowserTabTitle("Blog Not Found!");
         }
     }
 
     private void SetBrowserTabTitle(string title)
     {
         _browserTabTitle = title;
+    }
+    
+    private static bool BlogIsValid(string blogSlug)
+    {
+        return BlogService.Blogs.Any(b => b.Slug == blogSlug);
     }
 }

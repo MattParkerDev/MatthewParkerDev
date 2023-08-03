@@ -4,8 +4,16 @@
 @inject HttpClient Http
 
 <MudText Typo="Typo.h3" GutterBottom="true">@BlogTitle</MudText>
-
-<MudMarkdown Value="@MarkdownContent" />
+<style>
+    /* Until MudMarkdown Update their styles */
+    .mud-markdown-body blockquote {
+        margin-bottom: 1.25em !important;
+    }
+    .mud-markdown-body blockquote p {
+        margin-bottom: 0 !important;
+    }
+</style>
+<MudMarkdown CodeBlockTheme="CodeBlockTheme.Obsidian" Value="@MarkdownContent" />
 
 @code {
 

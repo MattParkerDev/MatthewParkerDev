@@ -1,6 +1,6 @@
 ﻿namespace MattParkerDev.WebUI.Models;
 
-public class AppState
+public sealed class AppState
 {
     
 }
