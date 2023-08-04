@@ -9,6 +9,8 @@ The summary on his [website](http://cleancoder.com/products) reads:
 
 This is a brilliant talk and I recommend watching it if you have time. [YouTube](https://www.youtube.com/watch?v=BSaAMQVq01E)
 
+Robert makes 5 very important points which every programmer should consider, which I hope to distill concisely. 
+
 ### 1. Dont Ship #@!%
 
 ```csharp
