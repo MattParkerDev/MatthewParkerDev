@@ -10,7 +10,7 @@
         <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="7.0.9" />
         <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="7.0.9" PrivateAssets="all" />
         <PackageReference Include="MudBlazor" Version="6.8.0" />
-        <PackageReference Include="MudBlazor.Markdown" Version="0.1.1" />
+        <PackageReference Include="MudBlazor.Markdown" Version="0.1.2" />
         <PackageReference Include="MudBlazor.ThemeManager" Version="1.0.8" />
     </ItemGroup>
 
