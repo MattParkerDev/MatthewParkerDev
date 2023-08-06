@@ -10,6 +10,7 @@ public static class BlogService
         {
             Sequence = 0,
             IsPublished = true,
+            PublishedDate = new DateTimeOffset(2023, 08, 1, 9, 0, 0, TimeSpan.Zero),
             Slug = "my-first-blog",
             Title = "My First Blog!",
             Description =
@@ -19,8 +20,9 @@ public static class BlogService
         {
             Sequence = 1,
             IsPublished = false,
+            PublishedDate = new DateTimeOffset(2023, 08, 07, 9, 0, 0, TimeSpan.Zero),
             Slug = "wip",
-            Title = "Expecting Professionalism",
+            Title = "Expecting Professionalism: The Programmer's Oath",
             Description =
                 "This is my second blog. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut."
         }

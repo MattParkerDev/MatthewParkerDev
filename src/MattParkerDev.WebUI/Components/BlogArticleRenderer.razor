@@ -3,8 +3,17 @@
 
 @inject HttpClient Http
 
-<MudText Typo="Typo.h3" GutterBottom="true">@BlogTitle</MudText>
-<MudMarkdown CodeBlockTheme="CodeBlockTheme.Obsidian" Value="@MarkdownContent" />
+<MudText Typo="Typo.h2" GutterBottom="true">@BlogTitle</MudText>
+@if (PublishedDate is not null)
+{
+    <MudText Class="mb-6" Style="font-style: italic" Typo="Typo.subtitle1" GutterBottom="true">Published by Matt Parker on @PublishedDate.Value.ToLocalTime().</MudText>
+}
+<style>
+    pre code.hljs {
+        margin-bottom: 1.25em;
+    }
+</style>
+<MudMarkdown CodeBlockTheme="CodeBlockTheme.Vs2015" Value="@MarkdownContent" />
 
 @code {
 
@@ -13,6 +22,7 @@
     
     private string BlogTitle { get; set; } = string.Empty;
     private string MarkdownContent { get; set; } = string.Empty;
+    private DateTimeOffset? PublishedDate { get; set; } = null;
     
     protected override async Task OnParametersSetAsync()
     {
@@ -28,6 +38,7 @@
             var blogContent = await Http.GetStringAsync($"_blogs/{blog.Slug}/{blog.Slug}.md");
             BlogTitle = blog.Title;
             MarkdownContent = blogContent;
+            PublishedDate = blog.PublishedDate;
         }
         catch (HttpRequestException e) when (e.StatusCode == HttpStatusCode.NotFound)
         {

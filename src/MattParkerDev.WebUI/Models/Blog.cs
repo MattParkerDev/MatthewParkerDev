@@ -8,5 +8,6 @@ public sealed class Blog
 
     //public required string Content { get; set; }
     public required bool IsPublished { get; set; }
+    public required DateTimeOffset PublishedDate { get; set; }
     public required int Sequence { get; set; }
 }
