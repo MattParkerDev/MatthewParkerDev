@@ -4,13 +4,14 @@ namespace MattParkerDev.WebUI.Services;
 
 public static class BlogService
 {
+    private static readonly TimeSpan TimeZoneOffset = TimeSpan.FromHours(+10); // +10 = AEST
     private static readonly List<Blog> _blogs = new List<Blog>
     {
         new()
         {
             Sequence = 0,
             IsPublished = true,
-            PublishedDate = new DateTimeOffset(2023, 08, 1, 9, 0, 0, TimeSpan.Zero),
+            PublishedDate = new DateTimeOffset(2023, 08, 1, 9, 0, 0, TimeZoneOffset),
             Slug = "my-first-blog",
             Title = "My First Blog!",
             Description =
@@ -20,7 +21,7 @@ public static class BlogService
         {
             Sequence = 1,
             IsPublished = false,
-            PublishedDate = new DateTimeOffset(2023, 08, 07, 9, 0, 0, TimeSpan.Zero),
+            PublishedDate = new DateTimeOffset(2023, 08, 07, 8, 0, 0, TimeZoneOffset),
             Slug = "wip",
             Title = "Expecting Professionalism: The Programmer's Oath",
             Description =

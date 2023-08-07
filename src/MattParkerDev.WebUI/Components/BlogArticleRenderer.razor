@@ -6,7 +6,7 @@
 <MudText Typo="Typo.h2" GutterBottom="true">@BlogTitle</MudText>
 @if (PublishedDate is not null)
 {
-    <MudText Class="mb-6" Style="font-style: italic" Typo="Typo.subtitle1" GutterBottom="true">Published by Matt Parker on @PublishedDate.Value.ToLocalTime().</MudText>
+    <MudText Class="mb-6" Style="font-style: italic" Typo="Typo.subtitle1" GutterBottom="true">Published by Matt Parker on @PublishedDate.Value.ToLocalTime().ToString("f")</MudText>
 }
 <style>
     pre code.hljs {
