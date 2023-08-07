@@ -1,5 +1,4 @@
-﻿@page "/blog"
-@page "/blog/{blogslug}"
+﻿@page "/blog/{blogslug?}"
 
 @using MattParkerDev.WebUI.Services
 
@@ -19,7 +18,7 @@ else
                 <BlogPreviewCard Title="@blog.Title" Description="@blog.Description" Slug="@blog.Slug" />
             </MudItem>
         }
-        @for (var i = 0; i < 7; i++)
+        @for (var i = 0; i < 8 - BlogService.Blogs.Count; i++)
         {
             <MudItem xs="12" sm="6" md="4" lg="3" xl="3">
                 <GenericSkeletonPost/>
