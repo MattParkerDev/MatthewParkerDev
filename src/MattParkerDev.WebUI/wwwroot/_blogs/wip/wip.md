@@ -1,22 +1,24 @@
-I recently watched a recording of a presentation given by Robert C. Martin, more affectionately known as Uncle Bob, titled `Expecting Professionalism`.
+I recently watched a recording of a presentation given by Robert C. Martin, more affectionately known as Uncle Bob, titled **Expecting Professionalism**.
 
 The summary on his [website](http://cleancoder.com/products) reads:
 
 > In this talk, Uncle Bob transports you into an alternate reality where he is your new CTO. This is what he expects from you.
 > As you listen, notice how reasonable these expectations are to customers and users. Notice also how impossible they appear to programmers.
 
-This is a brilliant talk and I recommend watching it if you have time. [YouTube](https://www.youtube.com/watch?v=BSaAMQVq01E)
+This is a brilliant talk and I recommend watching it when you have time. [YouTube](https://www.youtube.com/watch?v=BSaAMQVq01E)
 
-Robert makes 5 very important points which every programmer should consider, which I hope to distill concisely.
+Robert makes 15 important points which every programmer should consider, which I hope to distill concisely.
+
+From this point on, **I am your CTO** and these are my **expectations of you**.
 
 #### 1. Dont Ship #@!%
 
-Robert's first point is that we will not ship shit.
+We will not ship shit.
 
 ```csharp
-public void Ship() // TODO: Fix
+public void Ship(string code)
 {
-    if (IsShipable())
+    if (code is not "#@!%")
     {
         // Ship it!
     }
@@ -26,18 +28,21 @@ public void Ship() // TODO: Fix
 We will not, as a matter of ethics, knowingly ship code that is defective or substandard.
 
 This is not something you need to ask your boss - "Is it okay if I don't ship shit today?"
-As software developers, we are hired as professionals in our field - we are the experts. This is not something
-you need to ask permission for - it is expected of you.
+As software developers, we are hired as professionals in our field - we are the experts.\
+This is expected of you, and it's a hill you must die on.
 
-We should not violate this rule to meet deadlines.
+We must not violate this rule to meet deadlines or pressure from business.
 
-#### 2. We will always be ready
+#### 2. Always be ready
+
+We will always be ready
 // Sprint length\
 // Code should always be deployable
 
 What is your sprint size?
 
 #### 3. Stable Productivity
+
 greenfield - no code - how fast can you go? - business asks for a feature, yeah I can do that in a week.
 Week later, all done. Fast forward a year - a new feature takes 6 months.
 You will produce features just as fast a year from now, as you did today.
@@ -45,16 +50,19 @@ You will not slow down based on the mess you made, because you're not going to m
 We will not go fast if that will cause us to go slow later.
 
 #### 4. Inexpensive Adaptability
+
 Simple to change
 WIP
 
 #### 5. Continuous Improvement
+
 Code gets cleaner with time
 designs improve with time
 every system should be getting better, not worse.
 Boyscout rule: every time you check in a module, you check it in cleaner than you checked it out.
 
 #### 6. Fearless Competence
+
 If you fear it, you cannot clean it. If you cannot clean it, it rots.
 Extremely irresponsible to have lost control of the thing we created, to the extent that we fear any action towards it.
 Green button - unit testing.
@@ -77,25 +85,27 @@ be tracked down quickly to be resolved appropriately.
 Robert speaks about using JIRA etc, to track bugs, and that the norm has become - a lot of bugs.
 We should not have many bugs.
 
-#### 8. We will not dump on QA / QA will find nothing
+#### 8. QA will find nothing
 
-I expect that QA will find nothing.
+I expect that QA will find nothing - we will not dump bugs on QA.
+
 How did we come to expect it to be a good thing for QA to find defects?
 How do you evaluate how good a job QA is doing? They find more bugs! So now we've made bugs a good thing!
 
 Do the developers value the bugs?
+
 > If the code doesn't have to work, I can meet any deadline you set for me.
 
 #### 9. The majority of tests should be automated
+
 The inevitable outcome of manual testing, is that corner's will be cut, and not all of the software will be tested.
 
 > The inevitable outcome of manual testing is that you will **lose the tests**
 
 Robert continues to say that manual tests are insane! We are programmers after all - we write code! Why wouldn't we
-have written tests that test every business rule in the system? 
+have written tests that test every business rule in the system?
 
 > Manual testing is more expensive than writing tests // By me
-
 
 #### 10. Nothing Fragile
 
@@ -134,8 +144,8 @@ This answer is honest in both accuracy and precision.
 
 #### 13. You have to say 'No'
 
-We have a responsibility to communicate to our company or our client, 'No'. 
-Robert tells a story about software that was launched prematurely, and failed spectacularly. Certainly there were 
+We have a responsibility to communicate to our company or our client, 'No'.
+Robert tells a story about software that was launched prematurely, and failed spectacularly. Certainly there were
 programmers who knew that turning it on was a terrible idea.
 
 When we as programmers are faced with these situations, we **must** say No!
@@ -161,7 +171,7 @@ How many programmers were there in the world in 1948? ~5
 
 1965 - 100,000s
 
-1975  - computer science degrees.
+1975 - computer science degrees.
 
 Since 1975, the number of programmers in the world has ~ doubled every 5 years.
 
