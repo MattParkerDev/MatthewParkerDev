@@ -3,47 +3,51 @@
 
 @inject HttpClient Http
 
-<MudText Typo="Typo.h2" GutterBottom="true">@BlogTitle</MudText>
-@if (PublishedDate is not null)
+<SeoHeader Title="@_blogTitle" Description="@_blogDescription"/>
+
+<MudText Typo="Typo.h2" GutterBottom="true">@_blogTitle</MudText>
+@if (_publishedDate is not null)
 {
-    <MudText Class="mb-6" Style="font-style: italic" Typo="Typo.subtitle1" GutterBottom="true">Published by Matt Parker on @PublishedDate.Value.ToLocalTime().ToString("f")</MudText>
+    <MudText Class="mb-6" Style="font-style: italic" Typo="Typo.subtitle1" GutterBottom="true">Published by Matt Parker on @_publishedDate.Value.ToLocalTime().ToString("f")</MudText>
 }
 <style>
     pre code.hljs {
         margin-bottom: 1.25em;
     }
 </style>
-<MudMarkdown CodeBlockTheme="CodeBlockTheme.Vs2015" Value="@MarkdownContent" />
+<MudMarkdown CodeBlockTheme="CodeBlockTheme.Vs2015" Value="@_markdownContent" />
 
 @code {
 
     [Parameter]
     public string BlogSlug { get; set; } = default!;
     
-    private string BlogTitle { get; set; } = string.Empty;
-    private string MarkdownContent { get; set; } = string.Empty;
-    private DateTimeOffset? PublishedDate { get; set; } = null;
+    private string _blogTitle = string.Empty;
+    private string _blogDescription = string.Empty;
+    private string _markdownContent = string.Empty;
+    private DateTimeOffset? _publishedDate = null;
     
     protected override async Task OnParametersSetAsync()
     {
         var blog = BlogService.GetBlogBySlug(BlogSlug);
         if (blog is null)
         {
-            BlogTitle = "404 Not Found 😢";
-            MarkdownContent = "Head back to [blogs!](/blog)";
+            _blogTitle = "404 Not Found 😢";
+            _markdownContent = "Head back to [blogs!](/blog)";
             return;
         }
         try
         {
             var blogContent = await Http.GetStringAsync($"_blogs/{blog.Slug}/{blog.Slug}.md");
-            BlogTitle = blog.Title;
-            MarkdownContent = blogContent;
-            PublishedDate = blog.PublishedDate;
+            _blogTitle = blog.Title;
+            _markdownContent = blogContent;
+            _blogDescription = blog.Description;
+            _publishedDate = blog.PublishedDate;
         }
         catch (HttpRequestException e) when (e.StatusCode == HttpStatusCode.NotFound)
         {
-            BlogTitle = "404 Not Found 😢";
-            MarkdownContent = "Head back to [blogs!](/blog)";
+            _blogTitle = "404 Not Found 😢";
+            _markdownContent = "Head back to [blogs!](/blog)";
         }
     }
 }
