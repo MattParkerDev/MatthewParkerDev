@@ -4,6 +4,7 @@
 @inject IJSRuntime JsRuntime
 
 <PageTitle>MattParkerDev</PageTitle>
+<SeoHeader Title="MattParkerDev" Description="My portfolio website and where I blog about .NET, Azure and all things software." />
 
 <MudPaper Class="pa-4" Elevation="4">
     <MudStack Justify="Justify.SpaceBetween" AlignItems="AlignItems.Center" Row="true">
@@ -73,7 +74,6 @@
             _animationCancellationScheduled = false;
             return;
         }
-        Console.WriteLine("Scheduled animation cancellation");
         _animationCancellationScheduled = true;
         await JsRuntime.InvokeVoidAsync("registerAnimationEventListener", _objRef);
     }
