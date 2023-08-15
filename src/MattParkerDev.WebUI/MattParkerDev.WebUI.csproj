@@ -7,8 +7,9 @@
         <InvariantGlobalization>true</InvariantGlobalization>
         <RunAOTCompilation>true</RunAOTCompilation>
         <PublishTrimmed>true</PublishTrimmed>
-        <TrimMode>full</TrimMode>
+        <TrimMode>partial</TrimMode>
         <WasmEnableWebcil>true</WasmEnableWebcil>
+        <SuppressTrimAnalysisWarnings>false</SuppressTrimAnalysisWarnings>
         <BlazorEnableTimeZoneSupport>true</BlazorEnableTimeZoneSupport>
     </PropertyGroup>
 
