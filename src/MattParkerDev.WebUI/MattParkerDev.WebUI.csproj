@@ -6,6 +6,10 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <InvariantGlobalization>true</InvariantGlobalization>
         <RunAOTCompilation>true</RunAOTCompilation>
+        <PublishTrimmed>true</PublishTrimmed>
+        <TrimMode>full</TrimMode>
+        <WasmEnableWebcil>true</WasmEnableWebcil>
+        <BlazorEnableTimeZoneSupport>true</BlazorEnableTimeZoneSupport>
     </PropertyGroup>
 
     <ItemGroup>
