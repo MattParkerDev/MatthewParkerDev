@@ -7,12 +7,17 @@
         <InvariantGlobalization>true</InvariantGlobalization>
         <RunAOTCompilation>true</RunAOTCompilation>
         <PublishTrimmed>true</PublishTrimmed>
-        <TrimMode>partial</TrimMode>
+        <TrimMode>full</TrimMode>
         <WasmEnableWebcil>true</WasmEnableWebcil>
         <SuppressTrimAnalysisWarnings>false</SuppressTrimAnalysisWarnings>
+        <EnableTrimAnalyzer>true</EnableTrimAnalyzer>
         <BlazorEnableTimeZoneSupport>true</BlazorEnableTimeZoneSupport>
     </PropertyGroup>
-
+    
+    <ItemGroup>
+        <TrimmerRootAssembly Include="MattParkerDev.WebUI" />
+    </ItemGroup>
+    
     <ItemGroup>
         <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.0-preview.7.23375.9" />
         <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.0.0-preview.7.23375.9" PrivateAssets="all" />
