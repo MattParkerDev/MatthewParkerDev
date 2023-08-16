@@ -27,19 +27,47 @@
 </script>
 <div id="app">
     <!--Loading...-->
-    <script async src="/js/lottie-player.js"></script>
-    <div class="lottie-container">
-        <lottie-player src="/loading.json" background="transparent" speed="1" style="width: 17em; height: 17em;" loop autoplay></lottie-player>
-    </div>
     <style>
-        .lottie-container {
+        .loading-container {
             display: flex;
             align-items: center;
             justify-content: center;
             width: 100vw;
             height: 80vh;
         }
+        .loader {
+            color: #90a6fb;
+            font-family: Consolas, Menlo, Monaco, monospace;
+            font-weight: bold;
+            font-size: 200px;
+            opacity: 0.8;
+        }
+        .l1 {
+            display: inline-block;
+            animation: pulse 0.8s alternate infinite ease-in-out;
+        }
+        .l2 {
+            display: inline-block;
+            animation: pulse 0.8s 0.7s alternate infinite ease-in-out;
+        }
+        .l3 {
+            display: inline-block;
+            animation: pulse 0.8s alternate infinite ease-in-out;
+        }
+
+        @keyframes pulse {
+            to {
+                transform: scale(0.8);
+                opacity: 0.5;
+            }
+        }
     </style>
+    
+    <div class="loading-container">
+        <span class="loader l1">&lt;</span>
+        <span class="loader l2">/</span>
+        <span class="loader l3">&gt;</span>
+    </div>
 </div>
 <div id="blazor-error-ui">
     An unhandled error has occurred.
