@@ -37,25 +37,33 @@
         }
         .loader {
             color: #90a6fb;
-            font-family: Consolas, Menlo, Monaco, monospace;
+            font-family: Roboto, Consolas, Menlo, Monaco, monospace;
             font-weight: bold;
-            font-size: 200px;
             opacity: 0.8;
         }
         .l1 {
             display: inline-block;
-            animation: pulse 0.8s alternate infinite ease-in-out;
+            font-size: 13rem;
+            animation: pulse-small 0.8s alternate infinite ease-in-out;
         }
         .l2 {
             display: inline-block;
+            font-size: 14rem;
             animation: pulse 0.8s 0.7s alternate infinite ease-in-out;
         }
         .l3 {
             display: inline-block;
-            animation: pulse 0.8s alternate infinite ease-in-out;
+            font-size: 13rem;
+            animation: pulse-small 0.8s alternate infinite ease-in-out;
         }
 
         @keyframes pulse {
+            to {
+                transform: scale(0.9);
+                opacity: 0.5;
+            }
+        }
+        @keyframes pulse-small {
             to {
                 transform: scale(0.8);
                 opacity: 0.5;
@@ -75,7 +83,7 @@
     <a class="dismiss">🗙</a>
 </div>
 
-<script defer src="_framework/blazor.webassembly.js"></script>
+<script defer src="_framework/blazor.webassembly.js" autostart="false"></script>
 <script defer src="_content/MudBlazor/MudBlazor.min.js"></script>
 <script defer src="_content/MudBlazor.Markdown/MudBlazor.Markdown.min.js"></script>
 <script async src="js/avatar-animation-event-listener.js"></script>
