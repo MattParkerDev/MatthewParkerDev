@@ -10,7 +10,7 @@
 <MudLayout>
     <MudAppBar Elevation="0" Dense="true" DisableGutters="true">
         <MudButton Class="d-none d-sm-flex" Href="/" Color="Color.Inherit">
-            <MudIcon Class="mr-1" Icon="@Icons.Material.Filled.Home"></MudIcon>
+            <MudIcon Class="mr-1" Icon="@Icons.Material.Filled.Home" Title="Home"></MudIcon>
             <MudText Class=".d-none" Typo="Typo.h6">MattParkerDev</MudText>
         </MudButton>
         
@@ -27,10 +27,7 @@
         
         <MudSpacer/>   
         
-        <MudTooltip Duration="1000" Text="@(_isDarkMode ? "Switch to Light Theme" : "Switch to Dark Theme")">
-            <MudIconButton Class="pl-1" Icon="@(_isDarkMode ? @Icons.Material.Rounded.LightMode : @Icons.Material.Outlined.DarkMode)" Color="Color.Inherit" OnClick="@ToggleDarkMode"/>
-        </MudTooltip>
-        
+        <MudIconButton Class="pl-1" Title="Toggle dark mode" Icon="@(_isDarkMode ? @Icons.Material.Rounded.LightMode : @Icons.Material.Outlined.DarkMode)" Color="Color.Inherit" OnClick="@ToggleDarkMode"/>
         <MudIconButton Class="d-none d-md-flex" Icon="@Icons.Custom.Brands.GitHub" Color="Color.Inherit" Link="https://github.com/MattParkerDev" Target="_blank"/>
     </MudAppBar>
     <MudMainContent>
