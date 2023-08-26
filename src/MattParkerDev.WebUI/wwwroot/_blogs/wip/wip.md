@@ -29,60 +29,71 @@ We will not, as a matter of ethics, knowingly ship code that is defective or sub
 
 This is not something you need to ask your boss - "Is it okay if I don't ship shit today?"
 As software developers, we are hired as professionals in our field - we are the experts.\
-This is expected of you, and it's a hill you must die on.
+This is expected of you, and it is a hill you must die on.
 
 We must not violate this rule to meet deadlines or pressure from business.
 
 #### 2. Always be ready
 
-We will always be ready
-// Sprint length\
-// Code should always be deployable
+Consider the typical 2 week sprint. What is supposed to be done every 2 weeks? What should the status of your work be? `❌Done` `✅Deployable`.
+That does not necessarily mean you will deploy it, but that you and the team are satisfied that the code you have produced is **deployable**.
 
-What is your sprint size?
+> Code should always be deployable
+
+At the end of every sprint, you will always be ready.
 
 #### 3. Stable Productivity
 
-greenfield - no code - how fast can you go? - business asks for a feature, yeah I can do that in a week.
-Week later, all done. Fast forward a year - a new feature takes 6 months.
-You will produce features just as fast a year from now, as you did today.
-You will not slow down based on the mess you made, because you're not going to make the mess.
-We will not go fast if that will cause us to go slow later.
+Consider a greenfield project - how fast can you write code? 🔥💻  
+Business asks for a feature, you tell them it will take a week. A week later, all done.
+
+Fast forward a year, and it now takes 6 months to produce a new feature.
+
+This is unacceptable - you will produce features just as fast a year from now, as you did today. You will not slow down based on a mess you made, because you will not make the mess.
+
+> We will not go fast if that will cause us to go slow later.
 
 #### 4. Inexpensive Adaptability
 
-Simple to change
-WIP
+The software ought to be easy to change. The business should not find it expensive to adapt the system to new requirements.
+
+We are writing software, not hardware.
+
+✅ **Soft**ware => soft => easy to change.
+
+❌ **Hard**ware => hard => hard to change.
 
 #### 5. Continuous Improvement
 
-Code gets cleaner with time
-designs improve with time
-every system should be getting better, not worse.
-Boyscout rule: every time you check in a module, you check it in cleaner than you checked it out.
+I expect that the code gets cleaner with time, that designs improve with time.
+
+Every system should be getting better, not worse.
+
+> Boyscout rule: every time you check in a module, you check it in cleaner
+> than you checked it out.
 
 #### 6. Fearless Competence
 
-If you fear it, you cannot clean it. If you cannot clean it, it rots.
-Extremely irresponsible to have lost control of the thing we created, to the extent that we fear any action towards it.
-Green button - unit testing.
+You must not fear your code.
 
-Systems that don't have tests, weren't designed to be tested.
-What is the right level of code test coverage? 100% is the only reasonable answer, Bob explains, but it is also
-unachievable. You will never get to 100%. But we are used to asymtotpic goals! Keep pushing to get the number higher.
-By increasing that number, you get to a point where when you push the button, you are able to trust the green light
-that comes on.
-WIP 36:39
+If you fear it, you cannot clean it. If you cannot clean it, it rots.  
+IT is extremely irresponsible to have lost control of the thing we created, to the extent that we fear any action towards it.
+
+If only there was a big button I could push after changing code that lights up green if the code isn't broken, and I could be confident checking in changes. Well there is - unit testing!
+
+What is the right level of code test coverage? 100% is the only reasonable answer, but it is also unachievable. You will never get to 100%. But we are used to asymptotic goals! Keep pushing to get the number higher.
+By increasing that number, you get closer to trusting the green light when you push the button
+
+> Systems that don't have tests, weren't designed to be tested.
 
 #### 7. Extreme Quality
 
-With that green button, extreme quality is expected.
+With that green light, extreme quality is expected.
 
-I expect that the sofware is going to work consistently release after release. I don't expect lots of problems
-and crashes and data corruption. Perhaps the occasional bug once in a while, but when they do occur, I expect them to
-be tracked down quickly to be resolved appropriately.
+I expect that the sofware is going to work consistently release after release. I don't expect lots of problems and crashes and data corruption. Perhaps the occasional bug once in a while, but when they do occur, I expect them to be tracked down quickly to be resolved appropriately.
 
-Robert speaks about using JIRA etc, to track bugs, and that the norm has become - a lot of bugs.
+Nowadays companies use software like JIRA to keep track of bugs. You may have a hundred or more bugs in your backlog, and this has become the norm.
+
 We should not have many bugs.
 
 #### 8. QA will find nothing
@@ -92,7 +103,7 @@ I expect that QA will find nothing - we will not dump bugs on QA.
 How did we come to expect it to be a good thing for QA to find defects?
 How do you evaluate how good a job QA is doing? They find more bugs! So now we've made bugs a good thing!
 
-Do the developers value the bugs?
+Developers absolutely should be unit testing and manually testing any new features or code changes they produce, before merging changes and handing it over to QA.
 
 > If the code doesn't have to work, I can meet any deadline you set for me.
 
@@ -102,30 +113,29 @@ The inevitable outcome of manual testing, is that corner's will be cut, and not 
 
 > The inevitable outcome of manual testing is that you will **lose the tests**
 
-Robert continues to say that manual tests are insane! We are programmers after all - we write code! Why wouldn't we
+We are programmers after all - we write code! Why wouldn't we
 have written tests that test every business rule in the system?
 
-> Manual testing is more expensive than writing tests // By me
+> Manual testing is more expensive than writing tests
+
+Of course there are exceptions to this rule - there will always be cases where it is too expensive or not worth the time to write automated tests compared to manual testing.
 
 #### 10. Nothing Fragile
 
-No part of the system should be fragile.
-
 Think about the current project you're working on; there will always be a
-module that you are never surprised when it breaks.
+module that you are never surprised by when it breaks.
 
-> Fix fragile modules
+> No part of the system should be fragile.
 
 #### 11. Cover for each other
 
-You're on a project, and you're the database guy. That is your domain, and everyone else comes to you if they need
-changes made. If you're off the project for a day for whatever reason, no work on the database is done that day! ❌
+You're on a project, and you're the database guy. That is your domain, and everyone else comes to you if they need changes made. If you're off the project for a day for whatever reason, no work on the database is done that day! ❌
 
 It is your responsibility to make sure someone can cover for you if you are suddenly unavailable.
 
 #### 12. Honest Estimates
 
-What is the most honest estimate?
+What is the best estimate?
 
 **I don't know** is the most honest answer you can give!
 
@@ -135,7 +145,7 @@ There are two components to an estimate - the accuracy and the precision.
 
 _I don't know_ is the right precision, but that estimate is not **accurate**.
 
-Robert explains that he wants 3 numbers - the best case, the expected case and the worst case.
+I want 3 numbers - the best case, the expected case and the worst case.
 
 > If everything goes right, I might be able to get it done by Wednesday. But it rarely does, so probably Friday.
 > But if all hells breaks loose, probably next Friday.
@@ -145,19 +155,17 @@ This answer is honest in both accuracy and precision.
 #### 13. You have to say 'No'
 
 We have a responsibility to communicate to our company or our client, 'No'.
-Robert tells a story about software that was launched prematurely, and failed spectacularly. Certainly there were
-programmers who knew that turning it on was a terrible idea.
+
+Robert tells a story about software that was launched prematurely, and failed spectacularly. Certainly there were programmers who knew that turning it on was a terrible idea.
 
 When we as programmers are faced with these situations, we **must** say No!
 
 #### 14. Continuous Aggressive Learning
 
-The career software developer must ride the waves of new programming languages, frameworks, architectures
-and design patterns 🌊.
+The career software developer must ride the waves of new programming languages, frameworks, architectures and design patterns 🌊.
 
 We should be learning new things constantly - our role is consistently changing, likely in ways we cannot anticipate.
-Take the recent ChatGPT for example! A programmer who buries their head in the sand and ignores GitHub Copilot will
-likely be a worse programmer than an equivalent who does use it.
+Take the recent ChatGPT for example! A programmer who buries their head in the sand and ignores GitHub Copilot will be left behind.
 
 It is not your employer's responsibility for your career.
 
@@ -165,26 +173,24 @@ It is not your employer's responsibility for your career.
 
 How many programmers are there in the world?
 
-How many programmers were there in the world in 1948? ~5
+In 1948, there were ~5 programmers in the world.
 
-1955 - thousands of programmers - scientists, mathematicians - drawn out of existing industries.
+In 1955 - 1,000s.
 
-1965 - 100,000s
-
-1975 - computer science degrees.
+1965 - 100,000s.
 
 Since 1975, the number of programmers in the world has ~ doubled every 5 years.
 
-100,000,000 programmers.
+When Bob gave his talk (2015), there were 100,000,000 programmers in the world.
 
 > Half the programmers in the world have less than 5 years experience.
 
 This puts our industry in a state of perpetual inexperience.
 
 > It doesn't take a lot of intelligence to produce code, but it takes a lot of intelligence and experience to product
-> well structured systems with discipline
+> well structured systems with **discipline**
 
-Robert reiterates that this discipline is what needs to be instilled in the constant stream of new
+Discipline must be instilled in the constant stream of new
 programmers.
 
 ### Retro
