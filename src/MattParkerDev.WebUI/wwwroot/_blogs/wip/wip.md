@@ -27,31 +27,28 @@ public void Ship(string code)
 
 We will not, as a matter of ethics, knowingly ship code that is defective or substandard.
 
-This is not something you need to ask your boss - "Is it okay if I don't ship shit today?"
-As software developers, we are hired as professionals in our field - we are the experts.\
-This is expected of you, and it is a hill you must die on.
+This is not something you need to ask your boss - "Is it okay if I don't ship shit today?". As software developers, we are hired as professionals in our field - we are the experts. This is expected of you, and it is a hill you must die on.
 
 We must not violate this rule to meet deadlines or pressure from business.
 
 #### 2. Always be ready
 
-Consider the typical 2 week sprint. What is supposed to be done every 2 weeks? What should the status of your work be? `❌Done` `✅Deployable`.
+Consider the typical 2 week sprint. What is supposed to be done every 2 weeks? What should the status of your work be? `❌ Done` `✅ Deployable`.
 That does not necessarily mean you will deploy it, but that you and the team are satisfied that the code you have produced is **deployable**.
 
-> Code should always be deployable
+> **Code should always be deployable**
 
 At the end of every sprint, you will always be ready.
 
 #### 3. Stable Productivity
 
-Consider a greenfield project - how fast can you write code? 🔥💻  
-Business asks for a feature, you tell them it will take a week. A week later, all done.
+Consider a greenfield project - how fast can you write code? 🔥💻 Business asks for a feature, you tell them it will take a week. A week later, all done.
 
 Fast forward a year, and it now takes 6 months to produce a new feature.
 
 This is unacceptable - you will produce features just as fast a year from now, as you did today. You will not slow down based on a mess you made, because you will not make the mess.
 
-> We will not go fast if that will cause us to go slow later.
+> **We will not go fast if that will cause us to go slow later.**
 
 #### 4. Inexpensive Adaptability
 
@@ -59,9 +56,9 @@ The software ought to be easy to change. The business should not find it expensi
 
 We are writing software, not hardware.
 
-✅ **Soft**ware => soft => easy to change.
+✅ **Soft**ware ➡ soft ➡ easy to change.
 
-❌ **Hard**ware => hard => hard to change.
+❌ **Hard**ware ➡ hard ➡ hard to change.
 
 #### 5. Continuous Improvement
 
@@ -69,22 +66,20 @@ I expect that the code gets cleaner with time, that designs improve with time.
 
 Every system should be getting better, not worse.
 
-> Boyscout rule: every time you check in a module, you check it in cleaner
-> than you checked it out.
+> **Boyscout rule: every time you check in a module, you check it in cleaner than you checked it out.**
 
 #### 6. Fearless Competence
 
 You must not fear your code.
 
 If you fear it, you cannot clean it. If you cannot clean it, it rots.  
-IT is extremely irresponsible to have lost control of the thing we created, to the extent that we fear any action towards it.
+It is extremely irresponsible to have lost control of the thing we created, to the extent that we fear any action towards it.
 
-If only there was a big button I could push after changing code that lights up green if the code isn't broken, and I could be confident checking in changes. Well there is - unit testing!
+If only there was a big button I could push after changing code that lights up green 🟢 if the code isn't broken, and I could be confident checking in changes. Well there is - unit testing!
 
-What is the right level of code test coverage? 100% is the only reasonable answer, but it is also unachievable. You will never get to 100%. But we are used to asymptotic goals! Keep pushing to get the number higher.
-By increasing that number, you get closer to trusting the green light when you push the button
+What is the right level of code test coverage? 100% is the only reasonable answer, but it is also unachievable. You will never get to 100%. But we are used to asymptotic goals! Keep pushing to get the number higher. By increasing that number, you get closer to trusting the green light when you push the button.
 
-> Systems that don't have tests, weren't designed to be tested.
+> **Systems that don't have tests, weren't designed to be tested**
 
 #### 7. Extreme Quality
 
@@ -105,7 +100,7 @@ How do you evaluate how good a job QA is doing? They find more bugs! So now we'v
 
 Developers absolutely should be unit testing and manually testing any new features or code changes they produce, before merging changes and handing it over to QA.
 
-> If the code doesn't have to work, I can meet any deadline you set for me.
+> If the code doesn't have to work, I can meet any deadline you set for me
 
 #### 9. The majority of tests should be automated
 
@@ -122,28 +117,23 @@ Of course there are exceptions to this rule - there will always be cases where i
 
 #### 10. Nothing Fragile
 
-Think about the current project you're working on; there will always be a
-module that you are never surprised by when it breaks.
+Think about the current project you're working on; there will always be a module that you are never surprised by when it breaks.
 
-> No part of the system should be fragile.
+> No part of the system should be fragile
 
 #### 11. Cover for each other
 
 You're on a project, and you're the database guy. That is your domain, and everyone else comes to you if they need changes made. If you're off the project for a day for whatever reason, no work on the database is done that day! ❌
 
-It is your responsibility to make sure someone can cover for you if you are suddenly unavailable.
+It is your responsibility to make sure someone can cover for you if you are suddenly unavailable. ✅
 
 #### 12. Honest Estimates
 
 What is the best estimate?
 
-**I don't know** is the most honest answer you can give!
+**I don't know** is the most honest answer you can give! But we can do slightly better...
 
-But we can do slightly better...
-
-There are two components to an estimate - the accuracy and the precision.
-
-_I don't know_ is the right precision, but that estimate is not **accurate**.
+There are two components to an estimate - the accuracy and the precision. _I don't know_ is the right precision, but that estimate is not **accurate**.
 
 I want 3 numbers - the best case, the expected case and the worst case.
 
@@ -164,8 +154,7 @@ When we as programmers are faced with these situations, we **must** say No!
 
 The career software developer must ride the waves of new programming languages, frameworks, architectures and design patterns 🌊.
 
-We should be learning new things constantly - our role is consistently changing, likely in ways we cannot anticipate.
-Take the recent ChatGPT for example! A programmer who buries their head in the sand and ignores GitHub Copilot will be left behind.
+We should be learning new things constantly - our role is consistently changing, likely in ways we cannot anticipate. Take the recent ChatGPT for example! A programmer who buries their head in the sand and ignores GitHub Copilot will be left behind.
 
 It is not your employer's responsibility for your career.
 
@@ -183,15 +172,14 @@ Since 1975, the number of programmers in the world has ~ doubled every 5 years.
 
 When Bob gave his talk (2015), there were 100,000,000 programmers in the world.
 
-> Half the programmers in the world have less than 5 years experience.
+> **Half the programmers in the world have less than 5 years experience.**
 
 This puts our industry in a state of perpetual inexperience.
 
 > It doesn't take a lot of intelligence to produce code, but it takes a lot of intelligence and experience to product
 > well structured systems with **discipline**
 
-Discipline must be instilled in the constant stream of new
-programmers.
+Discipline must be instilled in the constant stream of new programmers.
 
 ### Retro
 
