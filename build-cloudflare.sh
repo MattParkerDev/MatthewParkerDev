@@ -1,7 +1,7 @@
 #!/bin/sh
 curl -sSL https://dot.net/v1/dotnet-install.sh > dotnet-install.sh
 chmod +x dotnet-install.sh
-./dotnet-install.sh -c 8.0 --version 8.0.0-rc.1.234.63.5 -InstallDir ./dotnet
+./dotnet-install.sh -c 8.0 --version 8.0.100-rc.1.23463.5 -InstallDir ./dotnet
 ./dotnet/dotnet --version
 ./dotnet/dotnet workload restore
 ./dotnet/dotnet workload list
