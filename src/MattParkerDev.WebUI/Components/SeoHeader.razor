@@ -1,3 +1,5 @@
+@inject IJSRuntime JsRuntime
+
 <HeadContent>
     <meta Name="keywords" Content="@GetKeywords()" />
     <meta Property="og:title" Content="@GetTitle()" />
@@ -20,16 +22,16 @@
     [Parameter]
     public IEnumerable<string> Keywords { get; set; } = new List<string>();
         
-    string GetTitle() => Title is null ? "MattParkerDev" : $"{Title} | MattParkerDev";
+    public string GetTitle() => Title is null ? "MattParkerDev" : $"{Title} | MattParkerDev";
         
-    string GetSubTitle()
+    public string GetSubTitle()
     {
         if (string.IsNullOrEmpty(Description))
             return "";
         return Description.TrimEnd('.') + ".";
     }
     
-    string GetKeywords()
+    public string GetKeywords()
     {
         var keywords = new List<string>();
         
@@ -39,4 +41,10 @@
     
         return string.Join(", ", keywords);
     }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await JsRuntime.InvokeVoidAsync("setPreRenderReady");
+    }
+
 }

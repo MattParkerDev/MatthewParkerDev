@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <script> window.prerenderReady = false; </script>
     <title>MattParkerDev</title>
     <base href="/" />
     <link href="/favicon.ico" rel="icon" type="image/x-icon" />
@@ -17,8 +18,13 @@
 </head>
 
 <body>
+
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-S63E8336J4"></script>
 <script>
+    window.setPreRenderReady = function () {
+        window.prerenderReady = true;
+    };
+    
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
