@@ -14,18 +14,19 @@ public static class BlogService
             PublishedDate = new DateTimeOffset(2023, 08, 1, 9, 0, 0, TimeZoneOffset),
             Slug = "my-first-blog",
             Title = "My First Blog!",
-            Description =
-                "This is my first blog. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut."
+            Description = "A demo blog.",
+            PreviewImageUrl = "./_blogs/my-first-blog/image.avif"
         },
         new()
         {
             Sequence = 1,
-            IsPublished = false,
-            PublishedDate = new DateTimeOffset(2023, 08, 07, 8, 0, 0, TimeZoneOffset),
-            Slug = "wip",
-            Title = "Expecting Professionalism: The Programmer's Oath",
-            Description =
-                "This is my second blog. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut."
+            IsPublished = true,
+            PublishedDate = new DateTimeOffset(2023, 10, 01, 8, 0, 0, TimeZoneOffset),
+            Slug = "expecting-professionalism",
+            Title = "Expecting Professionalism",
+            Description = "I am your CTO, and these are my expectations of you.",
+            PreviewImageUrl = "./_blogs/expecting-professionalism/image.avif"
+
         }
     };
     

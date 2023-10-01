@@ -1,14 +1,21 @@
-﻿
+﻿@using System.Reflection.Metadata
+
 @inject NavigationManager NavigationManager
 
 
-<MudCard style="cursor:pointer" @onclick="OpenBlog">
+<MudCard Style="cursor:pointer; height: 360px" @onclick="OpenBlog">
     <MudStack Style="height: 200px">
-        <MudSpacer />
         <MudStack>
-            <MudSpacer/>
-            <MudText Align="Align.Center" Typo="Typo.h2">🚧</MudText>
-            <MudSpacer/>
+            @if (false)
+            {
+                <MudSpacer/>
+                <MudText Align="Align.Center" Typo="Typo.h2">🚧</MudText>
+                <MudSpacer/>
+            }
+            else
+            {
+                <MudImage Elevation="0" Src="@ImageUrl" Style="height: 200px; width: 100%; object-fit: cover; border-top-left-radius: 5px; border-top-right-radius: 5px;" />
+            }
         </MudStack>
         <MudSpacer />
     </MudStack>
@@ -21,12 +28,14 @@
 </MudCard>
 
 @code {
-    [Parameter]
+    [Parameter, EditorRequired]
     public required string Title { get; set; }
-    [Parameter]
+    [Parameter, EditorRequired]
     public required string Description { get; set; }
-    [Parameter]
+    [Parameter, EditorRequired]
     public required string Slug { get; set; }
+    [Parameter, EditorRequired]
+    public required string ImageUrl { get; set; }
     
     private void OpenBlog()
     {

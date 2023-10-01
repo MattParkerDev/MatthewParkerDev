@@ -27,7 +27,7 @@ public void Ship(string code)
 
 We will not, as a matter of ethics, knowingly ship code that is defective or substandard.
 
-This is not something you need to ask your boss - "Is it okay if I don't ship shit today?". As software developers, we are hired as professionals in our field - we are the experts. This is expected of you, and it is a hill you must die on.
+This is not something you need to ask your boss - "Is it okay if I don't ship #@!% today?". As software developers, we are hired as professionals in our field - we are the experts. This is expected of you, and it is a hill you must die on.
 
 We must not violate this rule to meet deadlines or pressure from business.
 
@@ -46,7 +46,7 @@ Consider a greenfield project - how fast can you write code? 🔥💻 Business a
 
 Fast forward a year, and it now takes 6 months to produce a new feature.
 
-This is unacceptable - you will produce features just as fast a year from now, as you did today. You will not slow down based on a mess you made, because you will not make the mess.
+This is unacceptable - you must produce features just as fast a year from now, as you did today. You will not slow down based on a mess you made, because you will not make the mess.
 
 > **We will not go fast if that will cause us to go slow later.**
 
@@ -75,7 +75,7 @@ You must not fear your code.
 If you fear it, you cannot clean it. If you cannot clean it, it rots.  
 It is extremely irresponsible to have lost control of the thing we created, to the extent that we fear any action towards it.
 
-If only there was a big button I could push after changing code that lights up green 🟢 if the code isn't broken, and I could be confident checking in changes. Well there is - unit testing!
+If only there was a big button I could push after changing code that lights up green 🟢 if the code isn't broken, and I could be confident checking in changes. Well there is - **unit testing!**
 
 What is the right level of code test coverage? 100% is the only reasonable answer, but it is also unachievable. You will never get to 100%. But we are used to asymptotic goals! Keep pushing to get the number higher. By increasing that number, you get closer to trusting the green light when you push the button.
 
@@ -108,8 +108,7 @@ The inevitable outcome of manual testing, is that corner's will be cut, and not 
 
 > The inevitable outcome of manual testing is that you will **lose the tests**
 
-We are programmers after all - we write code! Why wouldn't we
-have written tests that test every business rule in the system?
+We are programmers after all - we write code! Why wouldn't we have written tests that test every business rule in the system?
 
 > Manual testing is more expensive than writing tests
 
@@ -137,8 +136,7 @@ There are two components to an estimate - the accuracy and the precision. _I don
 
 I want 3 numbers - the best case, the expected case and the worst case.
 
-> If everything goes right, I might be able to get it done by Wednesday. But it rarely does, so probably Friday.
-> But if all hells breaks loose, probably next Friday.
+> If everything goes right, I might be able to get it done by Wednesday. But it rarely does, so probably Friday. But if all hells breaks loose, probably next Friday.
 
 This answer is honest in both accuracy and precision.
 
@@ -146,7 +144,7 @@ This answer is honest in both accuracy and precision.
 
 We have a responsibility to communicate to our company or our client, 'No'.
 
-Robert tells a story about software that was launched prematurely, and failed spectacularly. Certainly there were programmers who knew that turning it on was a terrible idea.
+Consider software that is launched prematurely, and failed spectacularly - occurring countless times in history. Certainly there were programmers who knew that turning it on was a terrible idea.
 
 When we as programmers are faced with these situations, we **must** say No!
 
@@ -194,4 +192,4 @@ My biggest takeaways from Robert's presentation of equal importance:
 - Continuous Aggressive Learning
 
 Which requirement do you think is the most important? Are there any you hadn't considered before?
-Let me know in the comments! 😊
+Let me know on [Twitter](https://twitter.com/MattParkerDev) or [Threads](https://www.threads.net/@mattparkerdev)! 😊

@@ -5,10 +5,12 @@
 
 <SeoHeader Title="@_blogTitle" Description="@_blogDescription"/>
 
-<MudText Typo="Typo.h2" GutterBottom="true">@_blogTitle</MudText>
+<MudText Typo="Typo.h2" GutterBottom="false">@_blogTitle</MudText>
 @if (_publishedDate is not null)
 {
-    <MudText Class="mb-6" Style="font-style: italic" Typo="Typo.subtitle1" GutterBottom="true">Published by Matt Parker on @_publishedDate.Value.ToLocalTime().ToString("f")</MudText>
+    <MudDivider Class="mb-1" />
+    <MudText Class="mb-8" Style="font-style: italic" Typo="Typo.subtitle1" GutterBottom="true">Published by Matt Parker on @_publishedDate.Value.ToLocalTime().ToString("f")</MudText>
+    
 }
 <style>
     pre code.hljs {
@@ -38,7 +40,7 @@
         }
         try
         {
-            var blogContent = await Http.GetStringAsync($"_blogs/{blog.Slug}/{blog.Slug}.md");
+            var blogContent = await Http.GetStringAsync($"_blogs/{blog.Slug}/blog.md");
             _blogTitle = blog.Title;
             _markdownContent = blogContent;
             _blogDescription = blog.Description;

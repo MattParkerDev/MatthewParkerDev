@@ -10,4 +10,5 @@ public sealed class Blog
     public required bool IsPublished { get; set; }
     public required DateTimeOffset PublishedDate { get; set; }
     public required int Sequence { get; set; }
+    public required string? PreviewImageUrl { get; set; }
 }
