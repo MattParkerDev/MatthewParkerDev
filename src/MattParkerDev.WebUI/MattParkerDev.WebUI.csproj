@@ -12,7 +12,7 @@
         <WasmEnableWebcil>true</WasmEnableWebcil>
         <SuppressTrimAnalysisWarnings>false</SuppressTrimAnalysisWarnings>
         <EnableTrimAnalyzer>true</EnableTrimAnalyzer>
-        <WasmStripILAfterAOT>true</WasmStripILAfterAOT>
+<!--        <WasmStripILAfterAOT>true</WasmStripILAfterAOT> errors?--> 
     </PropertyGroup>
     
     <ItemGroup>
