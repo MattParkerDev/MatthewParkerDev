@@ -13,7 +13,7 @@ From this point on, **I am your CTO** and these are my **expectations of you**.
 
 #### 1. Dont Ship #@!%
 
-We will not ship shit.
+We will not ship #@!%.
 
 ```csharp
 public void Ship(string code)
