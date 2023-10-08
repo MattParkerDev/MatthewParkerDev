@@ -30,12 +30,12 @@ public static class BlogService
         new()
         {
             Sequence = 3,
-            IsPublished = false,
+            IsPublished = true,
             PublishedDate = new DateTimeOffset(2023, 10, 08, 14, 10, 0, TimeZoneOffset),
             Slug = "componentizing-image-format-fallback-blazor",
             Title = "Componentizing Image Format Fallback in Blazor",
-            Description = "Let's create a blazor component for the HTML <picture/> element.",
-            PreviewImageUrl = "./_blogs/expecting-professionalism/image"
+            Description = "",
+            PreviewImageIcon = "./img/blazor.svg"
         }
     };
     

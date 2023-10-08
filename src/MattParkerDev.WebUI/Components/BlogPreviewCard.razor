@@ -6,15 +6,13 @@
 <MudCard Style="cursor:pointer; height: 360px" @onclick="OpenBlog">
     <MudStack Style="height: 200px">
         <MudStack>
-            @if (false)
+            @if (ImageUrl is not null)
             {
-                <MudSpacer/>
-                <MudText Align="Align.Center" Typo="Typo.h2">🚧</MudText>
-                <MudSpacer/>
+                <CustomImage Src="@ImageUrl" PreferredExtensionOrder="avif,webp,jpg" Style="height: 200px; width: 100%; object-fit: cover; border-top-left-radius: 5px; border-top-right-radius: 5px;"/>
             }
-            else
+            else if (Icon is not null)
             {
-                <CustomImage Src="@ImageUrl" PreferredExtensionOrder="avif,webp,jpg" Style="height: 200px; width: 100%; object-fit: cover; border-top-left-radius: 5px; border-top-right-radius: 5px;" />
+                <MudImage Src="@Icon" Style="background-color: #f3f3f3; height: 200px; width: 100%; object-fit: contain; border-top-left-radius: 5px; border-top-right-radius: 5px;"/>
             }
         </MudStack>
         <MudSpacer />
@@ -34,8 +32,10 @@
     public required string Description { get; set; }
     [Parameter, EditorRequired]
     public required string Slug { get; set; }
-    [Parameter, EditorRequired]
-    public required string ImageUrl { get; set; }
+    [Parameter]
+    public string? ImageUrl { get; set; }
+    [Parameter]
+    public string? Icon { get; set; }
     
     private void OpenBlog()
     {
