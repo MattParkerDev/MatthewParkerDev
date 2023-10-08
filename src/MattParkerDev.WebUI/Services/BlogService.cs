@@ -30,7 +30,7 @@ public static class BlogService
         new()
         {
             Sequence = 3,
-            IsPublished = true,
+            IsPublished = false,
             PublishedDate = new DateTimeOffset(2023, 10, 08, 14, 10, 0, TimeZoneOffset),
             Slug = "componentizing-image-format-fallback-blazor",
             Title = "Componentizing Image Format Fallback in Blazor",
