@@ -15,7 +15,7 @@ public static class BlogService
             Slug = "my-first-blog",
             Title = "My First Blog!",
             Description = "A demo blog.",
-            PreviewImageUrl = "./_blogs/my-first-blog/image.avif"
+            PreviewImageUrl = "./_blogs/my-first-blog/image"
         },
         new()
         {
@@ -25,8 +25,17 @@ public static class BlogService
             Slug = "expecting-professionalism",
             Title = "Expecting Professionalism",
             Description = "I am your CTO, and these are my expectations of you.",
-            PreviewImageUrl = "./_blogs/expecting-professionalism/image.avif"
-
+            PreviewImageUrl = "./_blogs/expecting-professionalism/image"
+        },
+        new()
+        {
+            Sequence = 3,
+            IsPublished = true,
+            PublishedDate = new DateTimeOffset(2023, 10, 08, 14, 10, 0, TimeZoneOffset),
+            Slug = "componentizing-image-format-fallback-blazor",
+            Title = "Componentizing Image Format Fallback in Blazor",
+            Description = "Let's create a blazor component for the HTML <picture/> element.",
+            PreviewImageUrl = "./_blogs/expecting-professionalism/image"
         }
     };
     

@@ -11,7 +11,7 @@ Robert makes 15 important points which every programmer should consider, which I
 
 From this point on, **I am your CTO** and these are my **expectations of you**.
 
-#### 1. Dont Ship #@!%
+#### 1. Don't Ship #@!%
 
 We will not ship #@!%.
 
