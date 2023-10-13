@@ -5,7 +5,8 @@
 
 <SeoHeader Title="@_blogTitle" Description="@_blogDescription"/>
 
-<MudText Typo="Typo.h2" GutterBottom="false">@_blogTitle</MudText>
+<MudText Class="d-none d-sm-flex" Typo="Typo.h2" GutterBottom="false">@_blogTitle</MudText>
+<MudText Class="d-sm-none d-flex" Typo="Typo.h3" GutterBottom="false">@_blogTitle</MudText>
 @if (_publishedDate is not null)
 {
     <MudDivider Class="mb-1" />

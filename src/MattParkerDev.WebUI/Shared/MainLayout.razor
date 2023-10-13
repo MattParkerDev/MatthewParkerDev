@@ -31,7 +31,10 @@
         <MudIconButton Class="d-none d-md-flex" Icon="@Icons.Custom.Brands.GitHub" Color="Color.Inherit" Link="https://github.com/MattParkerDev" Target="_blank"/>
     </MudAppBar>
     <MudMainContent>
-        <MudContainer MaxWidth="MaxWidth.Large" Class="my-16 pt-16">
+        <MudContainer MaxWidth="MaxWidth.Large" Class="my-16 pt-16 d-none d-sm-block">
+            @Body
+        </MudContainer>
+        <MudContainer MaxWidth="MaxWidth.Large" Class="my-8 pt-8 d-block d-sm-none">
             @Body
         </MudContainer>
     </MudMainContent>
