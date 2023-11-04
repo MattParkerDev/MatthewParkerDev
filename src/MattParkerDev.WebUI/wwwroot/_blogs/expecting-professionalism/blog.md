@@ -5,7 +5,7 @@ The summary on his [website](http://cleancoder.com/products) reads:
 > In this talk, Uncle Bob transports you into an alternate reality where he is your new CTO. This is what he expects from you.
 > As you listen, notice how reasonable these expectations are to customers and users. Notice also how impossible they appear to programmers.
 
-This is a brilliant talk and I recommend watching it when you have time. [YouTube](https://www.youtube.com/watch?v=BSaAMQVq01E)
+This is a brilliant talk and I recommend watching it when you have time. [YouTube](https://www.youtube.com/watch?v=BSaAMQVq01E) (6:00 - 1:13:40)
 
 Robert makes 15 important points which every programmer should consider, which I hope to distill concisely.
 
