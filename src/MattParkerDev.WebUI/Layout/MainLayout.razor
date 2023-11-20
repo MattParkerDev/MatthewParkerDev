@@ -82,23 +82,44 @@
     {
         Palette = new PaletteLight()
         {
-            AppbarBackground = new MudColor("#3b3947ff"),
-            Secondary =  new MudColor("#5759d5ff"),
-            // Used for styling MudMarkdown...
-            OverlayDark = "#cfd1d0",
-            DrawerBackground = new MudColor("#e0e0e0"),
-            //
+            Primary = "#263238", // A deep, charcoal grey for a sophisticated primary color
+            Secondary = "#6fa8dc",  // A muted blue-grey for an elegant secondary color
+            AppbarBackground = "#446787", // A slightly lighter grey for the app bar
+            AppbarText = "#ffffff", // A light grey for contrast on the app bar
+            TextPrimary = "#212121", // Dark grey for primary text, ensuring readability
+            TextSecondary = "#727272", // Medium grey for secondary text
+            Background = "#eceff1", // A soft, light grey for the overall background
+            Surface = "#ffffff", // White for surfaces like cards, menus
+            ActionDefault = "#263238", // Use primary color for action elements
+            DrawerBackground = "#cfd8dc", // Light blue-grey for the drawer background
         },
         PaletteDark = new PaletteDark()
         {
-            Secondary = new MudColor("#5759d5ff")
+            Primary = "#263238", // Consistent primary color in dark mode
+            Secondary = "#546e7a", // Consistent secondary color in dark mode
+            Background = "#102027", // Darker grey for the overall background
+            Surface = "#1c313a", // Slightly lighter grey for surfaces
+            AppbarBackground = "#263238", // Consistent with primary color
+            TextPrimary = "#eceff1", // Light grey for primary text
+            TextSecondary = "#b0bec5", // Lighter grey for secondary text
         },
         LayoutProperties = new LayoutProperties()
         {
-            //DefaultBorderRadius = "4px"
+            DefaultBorderRadius = "4px", // Rounded edges for components
         },
         Typography = new Typography()
         {
+            Default = new Default()
+            {
+                FontFamily = new[] { "Roboto", "Helvetica", "Arial", "sans-serif" },
+                FontSize = "1rem",
+                FontWeight = 400,
+                LineHeight = 1.5,
+                LetterSpacing = "0.00938em",
+            },
+    // Additional typography settings as needed
         },
     };
+
+
 }

@@ -1,4 +1,4 @@
-﻿<MudCard Style="height: 360px">
+﻿<MudCard Class="@Class">
     <MudSkeleton SkeletonType="SkeletonType.Rectangle" Height="200px"/>
     <MudCardContent Class="pt-1">
         <MudSkeleton Width="30%" Height="42px;" />
@@ -12,5 +12,6 @@
 </MudCard>
 
 @code {
-    
+    [Parameter]
+    public string? Class { get; set; }
 }
