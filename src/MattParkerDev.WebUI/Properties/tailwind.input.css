@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.logoface {
+    width: 30px;
+    transform: rotate(0);
+}
+
+.logo:hover>span .logoface {
+    transform: rotate(360deg);
+    transition: all ease-in-out 0.4s;
+}

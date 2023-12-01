@@ -10,9 +10,9 @@
 <MudLayout>
     
         
-    <MudAppBar Elevation="0" DisableGutters="false">
-        <MudButton Class="d-none d-sm-flex" Href="/" Color="Color.Inherit">
-            <MudIcon Class="mr-1" Icon="@Icons.Material.Filled.Home" Title="Home"></MudIcon>
+    <MudAppBar Fixed="true" Class="justify-center flex flex-row border-b border-gray-100" ToolBarClass="mud-container-maxwidth-lg w-full" Elevation="0" DisableGutters="false">
+        <MudButton  Class="d-none d-sm-flex logo" Href="/" Color="Color.Inherit">
+            <MudImage Class="w-[30px] mr-2 logoface" Src="img/spinny.png"></MudImage>
             <MudText Typo="Typo.h6">MattParkerDev</MudText>
         </MudButton>
 
@@ -32,7 +32,7 @@
         <MudIconButton Class="pl-1" Title="Toggle dark mode" Icon="@(_isDarkMode ? @Icons.Material.Rounded.LightMode : @Icons.Material.Outlined.DarkMode)" Color="Color.Inherit" OnClick="@ToggleDarkMode"/>
         <MudIconButton Class="d-none d-md-flex" Icon="@Icons.Custom.Brands.GitHub" Color="Color.Inherit" Link="https://github.com/MattParkerDev" Target="_blank"/>
     </MudAppBar>
- 
+
     <MudMainContent>
         <MudContainer MaxWidth="MaxWidth.Large" Class="my-16 pt-16 d-none d-sm-block">
             @Body
@@ -85,26 +85,17 @@
     {
         Palette = new PaletteLight()
         {
-            Primary = "#263238", // A deep, charcoal grey for a sophisticated primary color
-            Secondary = "#6fa8dc",  // A muted blue-grey for an elegant secondary color
-            AppbarBackground = "#446787", // A slightly lighter grey for the app bar
-            AppbarText = "#ffffff", // A light grey for contrast on the app bar
-            TextPrimary = "#212121", // Dark grey for primary text, ensuring readability
-            TextSecondary = "#727272", // Medium grey for secondary text
-            Background = "#eceff1", // A soft, light grey for the overall background
-            Surface = "#ffffff", // White for surfaces like cards, menus
-            ActionDefault = "#263238", // Use primary color for action elements
-            DrawerBackground = "#cfd8dc", // Light blue-grey for the drawer background
-        },
-        PaletteDark = new PaletteDark()
-        {
-            Primary = "#263238", // Consistent primary color in dark mode
-            Secondary = "#546e7a", // Consistent secondary color in dark mode
-            Background = "#102027", // Darker grey for the overall background
-            Surface = "#1c313a", // Slightly lighter grey for surfaces
-            AppbarBackground = "#263238", // Consistent with primary color
-            TextPrimary = "#eceff1", // Light grey for primary text
-            TextSecondary = "#b0bec5", // Lighter grey for secondary text
+            Primary = "#bd9ddd", 
+            Secondary = "#dad7ea",
+            Tertiary = "#9edcad",
+            Background = "#fafafa",
+            AppbarBackground = "#fafafa",
+            AppbarText = "#180202",
+            TextPrimary = "#180202",
+            SecondaryContrastText = "#180202",
+            TextSecondary = "#180202", 
+            Surface = "#ffffff", 
+            ActionDefault = "#263238", 
         },
         LayoutProperties = new LayoutProperties()
         {
@@ -119,8 +110,7 @@
                 FontWeight = 400,
                 LineHeight = 1.5,
                 LetterSpacing = "0.00938em",
-            },
-    // Additional typography settings as needed
+            }
         },
     };
 
