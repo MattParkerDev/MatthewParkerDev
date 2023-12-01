@@ -5,20 +5,23 @@
 
 <SeoHeader Title="@_blogTitle" Description="@_blogDescription"/>
 
-<MudText Class="d-none d-sm-flex" Typo="Typo.h2" GutterBottom="false">@_blogTitle</MudText>
-<MudText Class="d-sm-none d-flex" Typo="Typo.h3" GutterBottom="false">@_blogTitle</MudText>
-@if (_publishedDate is not null)
-{
-    <MudDivider Class="mb-1" />
-    <MudText Class="mb-8" Style="font-style: italic" Typo="Typo.subtitle1" GutterBottom="true">Published by Matt Parker on @_publishedDate.Value.ToLocalTime().ToString("f")</MudText>
-    
-}
-<style>
-    pre code.hljs {
-        margin-bottom: 1.25em;
+<MudPaper Class="p-6 lg:p-12" Elevation="3" >
+    <MudText Class="d-none d-md-flex" Typo="Typo.h2" GutterBottom="false">@_blogTitle</MudText>
+    <MudText Class="d-none d-md-none d-sm-flex" Typo="Typo.h3" GutterBottom="false">@_blogTitle</MudText>
+    <MudText Class="d-flex d-sm-none" Typo="Typo.h4" GutterBottom="false">@_blogTitle</MudText>
+    @if (_publishedDate is not null)
+    {
+        <MudDivider Class="mb-1" />
+        <MudText Class="mb-8" Style="font-style: italic" Typo="Typo.subtitle1" GutterBottom="true">Published by Matt Parker on @_publishedDate.Value.ToLocalTime().ToString("f")</MudText>
+        
     }
-</style>
-<MudMarkdown CodeBlockTheme="CodeBlockTheme.Vs2015" Value="@_markdownContent" />
+    <style>
+        pre code.hljs {
+            margin-bottom: 1.25em;
+        }
+    </style>
+    <MudMarkdown CodeBlockTheme="CodeBlockTheme.Vs2015" Value="@_markdownContent" />
+</MudPaper>
 
 @code {
 
