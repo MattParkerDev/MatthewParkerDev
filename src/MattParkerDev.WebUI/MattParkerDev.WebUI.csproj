@@ -1,38 +1,25 @@
 <Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
-
-    <PropertyGroup>
-        <TargetFramework>net8.0</TargetFramework>
-        <Nullable>enable</Nullable>
-        <ImplicitUsings>enable</ImplicitUsings>
-        <InvariantGlobalization>true</InvariantGlobalization>
-        <BlazorEnableTimeZoneSupport>true</BlazorEnableTimeZoneSupport>
-        <RunAOTCompilation>true</RunAOTCompilation>
-        <PublishTrimmed>true</PublishTrimmed>
-        <TrimMode>full</TrimMode>
-        <WasmEnableWebcil>true</WasmEnableWebcil>
-        <SuppressTrimAnalysisWarnings>false</SuppressTrimAnalysisWarnings>
-        <EnableTrimAnalyzer>true</EnableTrimAnalyzer>
-<!--        <WasmStripILAfterAOT>true</WasmStripILAfterAOT> errors?--> 
-    </PropertyGroup>
-    
-    <ItemGroup>
-        <TrimmerRootAssembly Include="MattParkerDev.WebUI" />
-    </ItemGroup>
-    
-    <ItemGroup>
-        <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.0-rc.2.23480.2" />
-        <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.0.0-rc.2.23480.2" PrivateAssets="all" />
-        <PackageReference Include="MudBlazor" Version="6.11.0" />
-        <PackageReference Include="MudBlazor.Markdown" Version="0.1.2" />
-        <PackageReference Include="Tailwind.MSBuild" Version="1.1.0">
-          <PrivateAssets>all</PrivateAssets>
-          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-        </PackageReference>
-    </ItemGroup>
-
-    <PropertyGroup Label="Tailwind Properties">
-        <TailwindMinify>false</TailwindMinify>
-    </PropertyGroup>
-
-
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<InvariantGlobalization>true</InvariantGlobalization>
+		<BlazorEnableTimeZoneSupport>true</BlazorEnableTimeZoneSupport>
+		<RunAOTCompilation>true</RunAOTCompilation>
+		<PublishTrimmed>true</PublishTrimmed>
+		<TrimMode>full</TrimMode>
+		<WasmEnableWebcil>true</WasmEnableWebcil>
+		<SuppressTrimAnalysisWarnings>false</SuppressTrimAnalysisWarnings>
+		<EnableTrimAnalyzer>true</EnableTrimAnalyzer>
+		<!--        <WasmStripILAfterAOT>true</WasmStripILAfterAOT> errors?-->
+	</PropertyGroup>
+	<ItemGroup>
+		<TrimmerRootAssembly Include="MattParkerDev.WebUI" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.0.0" PrivateAssets="all" />
+		<PackageReference Include="MudBlazor" Version="6.11.0" />
+		<PackageReference Include="MudBlazor.Markdown" Version="0.1.2" />
+	</ItemGroup>
 </Project>
