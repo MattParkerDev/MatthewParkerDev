@@ -631,6 +631,14 @@ video {
   width: 30px;
 }
 
+.w-\[40\%\] {
+  width: 40%;
+}
+
+.w-\[60\%\] {
+  width: 60%;
+}
+
 .w-full {
   width: 100%;
 }
@@ -687,11 +695,6 @@ video {
 .border-gray-50 {
   --tw-border-opacity: 1;
   border-color: rgb(242 242 242 / var(--tw-border-opacity));
-}
-
-.border-gray-75 {
-  --tw-border-opacity: 1;
-  border-color: rgb(235 235 235 / var(--tw-border-opacity));
 }
 
 .border-secondary {
@@ -792,6 +795,24 @@ video {
 .logo:hover>span .logoface {
   transform: rotate(360deg);
   transition: all ease-in-out 0.4s;
+}
+
+.avatar-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+
+  50% {
+    transform: translatey(-20px);
+  }
+
+  100% {
+    transform: translatey(0px);
+  }
 }
 
 @media (min-width: 640px) {
