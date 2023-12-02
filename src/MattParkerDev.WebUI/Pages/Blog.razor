@@ -10,8 +10,10 @@
 }
 else
 {
-    <MudText Typo="Typo.h3" GutterBottom="true">Blog</MudText>
-    <MudGrid>
+    <MudText Typo="Typo.h2" Class="mb-4" GutterBottom="false">Blog</MudText>
+    <hr class="border-b-2 border-accent w-64" />
+    
+    <MudGrid Class="mt-8">
         @foreach(var blog in BlogService.Blogs.OrderBy(s => s.Sequence))
         {
             <MudItem xs="12" sm="6" md="4" lg="3" xl="3">

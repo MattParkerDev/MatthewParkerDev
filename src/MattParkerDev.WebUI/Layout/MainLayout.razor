@@ -8,7 +8,7 @@
 <MudSnackbarProvider />
 
 <MudLayout>
-    <MudAppBar Fixed="true" Class="justify-center flex flex-row border-b border-gray-100" ToolBarClass="mud-container-maxwidth-lg w-full" Elevation="0" DisableGutters="false">
+    <MudAppBar Fixed="true" Class="justify-center flex flex-row border-b border-gray-100" ToolBarClass="container w-full" Elevation="0" DisableGutters="false">
         <MudButton Class="d-flex logo" Href="/" Color="Color.Inherit">
             <MudImage Class="w-[30px] mr-2 logoface" Src="img/spinny.png"></MudImage>
             <MudText Typo="Typo.h6">MattParkerDev</MudText>
@@ -110,7 +110,12 @@
             {
                 FontSize = "5rem",
                 FontWeight = 600
-            }
+            },
+            H2 = new H2()
+            {
+                FontSize = "3.75rem",
+                FontWeight = 500
+            },
         },
     };
 
