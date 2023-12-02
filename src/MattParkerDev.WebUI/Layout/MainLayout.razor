@@ -29,10 +29,10 @@
     </MudAppBar>
 
     <MudMainContent>
-        <MudContainer MaxWidth="MaxWidth.Large" Class="my-16 pt-16 d-none d-sm-block">
+        <MudContainer MaxWidth="MaxWidth.False" Class="container my-16 pt-16 d-none d-sm-block">
             @Body
         </MudContainer>
-        <MudContainer MaxWidth="MaxWidth.Large" Class="my-8 pt-8 d-block d-sm-none">
+        <MudContainer MaxWidth="MaxWidth.False" Class="container my-8 pt-8 d-block d-sm-none">
             @Body
         </MudContainer>
     </MudMainContent>
@@ -114,6 +114,11 @@
             H2 = new H2()
             {
                 FontSize = "3.75rem",
+                FontWeight = 500
+            },
+            H3 = new H3()
+            {
+                FontSize = "3rem",
                 FontWeight = 500
             },
         },
