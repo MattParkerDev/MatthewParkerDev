@@ -9,10 +9,10 @@
 
 <MudLayout>
     <MudAppBar Fixed="true" Class="justify-center flex flex-row border-b border-gray-100" ToolBarClass="container w-full" Elevation="0" DisableGutters="false">
-        <MudButton Class="d-flex logo" Href="/" Color="Color.Inherit">
-            <MudImage Class="w-[30px] mr-2 logoface" Src="img/spinny.png"></MudImage>
-            <MudText Typo="Typo.h6">MattParkerDev</MudText>
-        </MudButton>
+        <div class="d-flex logo">
+            <MudImage Class="w-[30px] logoface" Src="img/spinny.png"></MudImage>
+            <MudLink Href="/" Typo="Typo.h6" Color="Color.Inherit" Underline="Underline.None">MattParkerDev</MudLink>
+        </div>
 
         @* <MudButton Variant="@GetNavButtonVariant(AppPage.Home)" Class="d-flex d-sm-none pa-1 ml-2" Style="min-width: 32px;" Color="@GetNavButtonColour(AppPage.Home)" Icon="@Icons.Material.Filled.Home" Href="/"> *@
         @*     <MudIcon Class="pa-0 ma-0" Icon="@Icons.Material.Filled.Home"/> *@
@@ -23,7 +23,8 @@
         @* <MudButton Variant="@GetNavButtonVariant(AppPage.Home)" Class="hidden mx-1 px-3 d-none d-sm-flex" Color="@GetNavButtonColour(AppPage.Home)" IconColor="Color.Inherit" StartIcon="@Icons.Material.Filled.Home" Href="/">Home</MudButton> *@
         @* <MudButton Variant="@GetNavButtonVariant(AppPage.About)" Class="hidden" Color="@GetNavButtonColour(AppPage.About)" IconColor="Color.Inherit" StartIcon="@Icons.Material.Filled.Info" Href="about">About</MudButton> *@
         @* <MudButton Variant="@GetNavButtonVariant(AppPage.Portfolio)" Class="hidden" Color="@GetNavButtonColour(AppPage.Portfolio)" IconColor="Color.Inherit" StartIcon="@Icons.Material.Filled.Article" Href="portfolio">Portfolio</MudButton> *@
-        <MudButton Variant="@GetNavButtonVariant(AppPage.Blog)" Class="@GetNavButtonClass(AppPage.Blog)" Color="@GetNavButtonColour(AppPage.Blog)" IconColor="Color.Inherit" StartIcon="@Icons.Material.Filled.Newspaper" Href="blog">Blog</MudButton>
+        @* <MudButton Variant="@GetNavButtonVariant(AppPage.Blog)" Class="@GetNavButtonClass(AppPage.Blog)" Color="@GetNavButtonColour(AppPage.Blog)" IconColor="Color.Inherit" StartIcon="@Icons.Material.Filled.Newspaper" Href="blog">Blog</MudButton> *@
+        <MudLink Typo="Typo.h6" Class="text-text hover:text-gray-700" Color="Color.Default" Href="blog" Underline="Underline.None">Blog</MudLink>
 
         @* <MudIconButton Class="hidden pl-1" Title="Toggle dark mode" Icon="@(_isDarkMode ? @Icons.Material.Rounded.LightMode : @Icons.Material.Outlined.DarkMode)" Color="Color.Inherit" OnClick="@ToggleDarkMode"/> *@
     </MudAppBar>

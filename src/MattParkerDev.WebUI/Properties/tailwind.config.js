@@ -18,12 +18,13 @@ module.exports = {
       }
     },
     colors: {
-      'text': '#000000',
+      'text': '#180202',
       'background': '#fafafa',
       'primary': '#bd9ddd',
       'secondary': '#dad7ea',
       'accent': '#9edcad',
       'gray': {
+        DEFAULT: '#808080',
         50: '#f2f2f2',
         100: '#e6e6e6',
         200: '#cccccc',
