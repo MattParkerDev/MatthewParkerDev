@@ -2,14 +2,13 @@
 
 @using MattParkerDev.WebUI.Services
 
-<PageTitle>@_browserTabTitle</PageTitle>
-
 @if (BlogSlug is not null)
 {
     <BlogArticleRenderer BlogSlug="@BlogSlug" />
 }
 else
 {
+    <SeoHeader Title="@_browserTabTitle" Description="My published blogs on MattParkerDev" />
     <MudText Typo="Typo.h2" Class="mb-4" GutterBottom="false">Blog</MudText>
     <hr class="border-b-2 border-accent w-64" />
     
