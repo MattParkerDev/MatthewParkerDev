@@ -704,6 +704,10 @@ video {
   display: none;
 }
 
+.h-\[200px\] {
+  height: 200px;
+}
+
 .h-fit {
   height: -moz-fit-content;
   height: fit-content;
@@ -789,6 +793,14 @@ video {
   border-radius: 0.75rem;
 }
 
+.rounded-tl-\[5px\] {
+  border-top-left-radius: 5px;
+}
+
+.rounded-tr-\[5px\] {
+  border-top-right-radius: 5px;
+}
+
 .border {
   border-width: 1px;
 }
@@ -857,6 +869,11 @@ video {
 .bg-accent {
   --tw-bg-opacity: 1;
   background-color: rgb(158 220 173 / var(--tw-bg-opacity));
+}
+
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .p-12 {
