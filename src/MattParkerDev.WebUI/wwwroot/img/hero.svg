@@ -1,34 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384.54 341.33">
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 383 340">
   <defs>
     <style>
       .cls-1 {
-        fill: #dad7ea;
-        stroke: #dad7ea;
+        fill: #9edcad;
       }
 
       .cls-1, .cls-2, .cls-3, .cls-4 {
-        stroke-miterlimit: 10;
+        stroke-width: 0px;
       }
 
       .cls-2 {
-        fill: #fafafa;
-        stroke: #fafafa;
+        fill: #bd9ddd;
       }
 
       .cls-3 {
-        fill: #bd9ddd;
-        stroke: #bd9ddd;
+        fill: #fafafa;
       }
 
       .cls-4 {
-        fill: #9edcad;
-        stroke: #9edcad;
+        fill: #dad7ea;
       }
     </style>
   </defs>
-  <rect class="cls-3" x=".67" y=".5" width="383" height="340.33"/>
-  <path class="cls-4" d="m.5,340.8h383.12l.42-103.46s-71.97-27.68-191.88-35.76c-126.9-8.56-168.94,1.06-191.5,5.76l-.17,133.47Z"/>
-  <polygon class="cls-1" points="147.79 30.87 36.38 283.12 259.21 283.12 147.79 30.87"/>
-  <polygon class="cls-2" points="236.54 43.9 125.13 296.16 347.95 296.16 236.54 43.9"/>
+  <rect class="cls-2" width="383" height="340"/>
+  <path class="cls-1" d="M383,340v-105.08s-71.87-28.11-191.6-36.32c-126.72-8.69-168.87,1.08-191.4,5.85v135.55h383Z"/>
+  <polygon class="cls-4" points="147.49 29 36 281 259 281 147.49 29"/>
+  <polygon class="cls-3" points="236.5 42 125 294 348 294 236.5 42"/>
 </svg>
