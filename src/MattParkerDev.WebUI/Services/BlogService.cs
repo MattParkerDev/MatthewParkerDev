@@ -36,6 +36,16 @@ public static class BlogService
             Title = "Componentizing Image Format Fallback in Blazor",
             Description = "",
             PreviewImageIcon = "./img/blazor.svg"
+        },
+        new()
+        {
+            Sequence = 4,
+            IsPublished = true,
+            PublishedDate = new DateTimeOffset(2024, 03, 15, 18, 01, 0, TimeZoneOffset),
+            Slug = "efcore-health-checks",
+            Title = "Entity Framework Core (EF Core) Health Checks",
+            Description = "",
+            PreviewImageUrl = "./_blogs/efcore-health-checks/health-check"
         }
     };
     
