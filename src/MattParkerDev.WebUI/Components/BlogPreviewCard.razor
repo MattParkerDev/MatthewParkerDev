@@ -8,7 +8,7 @@
         <MudStack>
             @if (ImageUrl is not null)
             {
-                <CustomImage Class="object-cover h-[200px] w-full rounded-tl-[5px] rounded-tr-[5px]" Src="@ImageUrl" PreferredExtensionOrder="avif,webp,jpg" />
+                <MudImage Class="object-cover h-[200px] w-full rounded-tl-[5px] rounded-tr-[5px]" Elevation="0" Src="@ImageUrl" />
             }
             else if (Icon is not null)
             {

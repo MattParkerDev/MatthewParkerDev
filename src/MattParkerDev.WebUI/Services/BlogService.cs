@@ -15,7 +15,7 @@ public static class BlogService
             Slug = "my-first-blog",
             Title = "My First Blog!",
             Description = "A demo blog.",
-            PreviewImageUrl = "./_blogs/my-first-blog/image"
+            PreviewImageUrl = "./_blogs/my-first-blog/image.webp"
         },
         new()
         {
@@ -25,7 +25,7 @@ public static class BlogService
             Slug = "expecting-professionalism",
             Title = "Expecting Professionalism",
             Description = "I am your CTO, and these are my expectations of you.",
-            PreviewImageUrl = "./_blogs/expecting-professionalism/image"
+            PreviewImageUrl = "./_blogs/expecting-professionalism/image.webp"
         },
         new()
         {
@@ -45,7 +45,7 @@ public static class BlogService
             Slug = "efcore-health-checks",
             Title = "Entity Framework Core (EF Core) Health Checks",
             Description = "",
-            PreviewImageUrl = "./_blogs/efcore-health-checks/health-check"
+            PreviewImageUrl = "./_blogs/efcore-health-checks/health-check.webp"
         }
     };
     
