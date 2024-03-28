@@ -4,7 +4,7 @@ Adding a health check for an Entity Framework Core database is not immediately a
 
 Lets first add the `Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore` package to our project.
 
-I discovered this package by reading the [ASP.NET Core source code on GitHub.]("https://github.com/dotnet/aspnetcore/blob/main/src/Middleware/HealthChecks.EntityFrameworkCore/src/DependencyInjection/EntityFrameworkCoreHealthChecksBuilderExtensions.cs")
+I discovered this package by reading the [ASP.NET Core source code on GitHub.](https://github.com/dotnet/aspnetcore/blob/main/src/Middleware/HealthChecks.EntityFrameworkCore/src/DependencyInjection/EntityFrameworkCoreHealthChecksBuilderExtensions.cs)
 
 
 
