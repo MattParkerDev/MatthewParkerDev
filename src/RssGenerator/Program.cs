@@ -21,6 +21,7 @@ var items = BlogService.Blogs.Select(post => new SyndicationItem(
 
 var feed = new SyndicationFeed(items)
 {
+    Links = { new SyndicationLink(new Uri("https://mattparker.dev/blog")) },
     Title = new TextSyndicationContent("MattParkerDev's Blog"),
     Description = new TextSyndicationContent("My portfolio website and where I blog about .NET, Azure and all things software."),
     LastUpdatedTime = DateTimeOffset.Now
