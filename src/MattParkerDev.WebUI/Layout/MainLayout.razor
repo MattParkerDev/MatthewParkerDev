@@ -1,5 +1,4 @@
-﻿@using MattParkerDev.WebUI.Models
-@using MudBlazor.Utilities
+﻿
 @inherits LayoutComponentBase
 @inject NavigationManager NavigationManager
 
@@ -8,7 +7,7 @@
 <MudSnackbarProvider />
 
 <MudLayout>
-    <MudAppBar Fixed="true" Class="justify-center flex flex-row border-b border-gray-100" ToolBarClass="container w-full" Elevation="0" DisableGutters="false">
+    <MudAppBar Fixed="true" Class="justify-center flex flex-row border-b border-gray-100" ToolBarClass="container w-full" Elevation="0" Gutters="true">
         <div class="d-flex logo">
             <MudImage Class="w-[30px] logoface" Src="img/hero.svg"></MudImage>
             <MudLink Href="/" Typo="Typo.h6" Color="Color.Inherit" Underline="Underline.None">MattParkerDev</MudLink>
@@ -77,9 +76,9 @@
         return currentPage;
     }
     
-    private readonly MudTheme _theme = new MudTheme()
+    private readonly MudTheme _theme = new MudTheme
     {
-        Palette = new PaletteLight()
+        PaletteLight = new PaletteLight
         {
             Primary = "#bd9ddd", 
             Secondary = "#dad7ea",
