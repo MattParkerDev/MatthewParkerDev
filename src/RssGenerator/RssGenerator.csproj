@@ -8,7 +8,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="System.ServiceModel.Syndication" Version="10.0.1" />
+		<PackageReference Include="System.ServiceModel.Syndication" Version="10.0.7" />
 	</ItemGroup>
 
 	<ItemGroup>
