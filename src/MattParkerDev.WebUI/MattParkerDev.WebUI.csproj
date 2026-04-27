@@ -21,7 +21,7 @@
 		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="10.0.1" PrivateAssets="all" />
 		<PackageReference Include="MudBlazor" Version="8.15.0" />
 		<PackageReference Include="MudBlazor.Markdown" Version="8.11.0" />
-		<PackageReference Include="Tailwind.MSBuild" Version="1.1.0">
+		<PackageReference Include="Tailwind.MSBuild" Version="2.0.3">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
